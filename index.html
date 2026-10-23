@@ -1,0 +1,3588 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanoat Stanoklari va Texnologiyalari — Professional Muhandislik Portali</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230071e3'/><path d='M30 50 A20 20 0 0 1 70 50 A20 20 0 0 1 30 50 Z' fill='none' stroke='white' stroke-width='8'/><circle cx='50' cy='50' r='6' fill='white'/></svg>">
+
+<!-- Fonts: Inter & JetBrains Mono for pristine Apple-grade typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 & FontAwesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ==========================================================================
+   APPLE DESIGN SYSTEM — MINIMALIST, CLEAN & MODERN INDUSTRIAL AESTHETIC
+   ========================================================================== */
+:root {
+  --apple-bg: #fbfbfd;
+  --apple-card: #ffffff;
+  --apple-card-hover: #ffffff;
+  --apple-text: #1d1d1f;
+  --apple-text-secondary: #86868b;
+  --apple-text-tertiary: #a1a1a6;
+  --apple-border: rgba(0, 0, 0, 0.08);
+  --apple-border-focus: rgba(0, 113, 227, 0.4);
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-blue-light: rgba(0, 113, 227, 0.08);
+  --apple-green: #34c759;
+  --apple-green-light: rgba(52, 199, 89, 0.12);
+  --apple-amber: #ff9500;
+  --apple-amber-light: rgba(255, 149, 0, 0.12);
+  --apple-red: #ff3b30;
+  --apple-red-light: rgba(255, 59, 48, 0.12);
+  --apple-dark: #1d1d1f;
+  --apple-gray: #f5f5f7;
+  --apple-gray-2: #e8e8ed;
+  --apple-glass: rgba(255, 255, 255, 0.82);
+  --apple-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --apple-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --apple-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --apple-radius-sm: 12px;
+  --apple-radius-md: 18px;
+  --apple-radius-lg: 24px;
+  --apple-radius-pill: 980px;
+  --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--apple-bg);
+  color: var(--apple-text);
+  font-family: var(--font-main);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Subtle background lighting effect */
+.bg-subtle-glow {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 1200px;
+  height: 600px;
+  background: radial-gradient(circle at 50% 10%, rgba(0, 113, 227, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   NAVIGATION & HEADER (APPLE STYLE GLASSMORPHISM)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--apple-glass);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--apple-border);
+  transition: all 0.3s var(--ease-apple);
+}
+
+.header-top {
+  padding: 10px 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--apple-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #1d1d1f, #3a3a3c);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s var(--ease-apple);
+}
+
+.brand-badge:hover .brand-icon {
+  transform: scale(1.05);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--apple-radius-pill);
+  background: var(--apple-gray);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--apple-text-secondary);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--apple-green);
+  box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.7);
+  animation: pulseGreen 2.2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(52, 199, 89, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 199, 89, 0); }
+}
+
+/* Nav Pills Segmented Control */
+.nav-scroll-wrap {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 6px 0 10px;
+}
+.nav-scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.apple-nav-pills {
+  display: inline-flex;
+  background: var(--apple-gray);
+  padding: 4px;
+  border-radius: var(--apple-radius-pill);
+  gap: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.apple-nav-pills .nav-item {
+  margin: 0;
+}
+
+.apple-nav-pills .nav-link {
+  color: var(--apple-text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: var(--apple-radius-pill);
+  border: none;
+  white-space: nowrap;
+  transition: all 0.25s var(--ease-apple);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apple-nav-pills .nav-link:hover {
+  color: var(--apple-text);
+}
+
+.apple-nav-pills .nav-link.active {
+  background: #ffffff;
+  color: var(--apple-text);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.apple-nav-pills .nav-link i {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.apple-card {
+  background: var(--apple-card);
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius-lg);
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: var(--apple-shadow-sm);
+  transition: box-shadow 0.35s var(--ease-apple), transform 0.35s var(--ease-apple), border-color 0.35s ease;
+  position: relative;
+}
+
+.apple-card:hover {
+  box-shadow: var(--apple-shadow-md);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.card-eyebrow {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--apple-blue);
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--apple-text);
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  color: var(--apple-text-secondary);
+  font-size: 0.94rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Tab entrance animation */
+.tab-pane.active {
+  animation: appleFadeIn 0.4s var(--ease-apple) forwards;
+}
+
+@keyframes appleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   BUTTONS & FORM ELEMENTS (APPLE STYLE)
+   ========================================================================== */
+.btn-apple-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--apple-dark);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 22px;
+  border-radius: var(--apple-radius-pill);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-apple);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.btn-apple-primary:hover {
+  background: #333336;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-apple-blue {
+  background: var(--apple-blue);
+  color: #ffffff !important;
+}
+
+.btn-apple-blue:hover {
+  background: var(--apple-blue-hover);
+}
+
+.btn-apple-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--apple-gray);
+  color: var(--apple-text) !important;
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 10px 20px;
+  border-radius: var(--apple-radius-pill);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-apple);
+}
+
+.btn-apple-secondary:hover {
+  background: var(--apple-gray-2);
+  border-color: rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-apple-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--apple-blue) !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  border-radius: var(--apple-radius-pill);
+  border: 1px solid rgba(0, 113, 227, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-apple-outline:hover {
+  background: var(--apple-blue-light);
+  border-color: var(--apple-blue);
+}
+
+.btn-apple-danger {
+  background: var(--apple-red);
+  color: #fff !important;
+}
+.btn-apple-danger:hover {
+  background: #e02d24;
+}
+
+/* Apple Form Controls */
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--apple-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.apple-input, .form-select.apple-input, .form-control.apple-input {
+  background-color: var(--apple-gray) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  color: var(--apple-text) !important;
+  border-radius: var(--apple-radius-sm) !important;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--font-main);
+  transition: all 0.2s ease;
+}
+
+.apple-input:focus {
+  background-color: #ffffff !important;
+  border-color: var(--apple-blue) !important;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15) !important;
+  outline: none;
+}
+
+/* Custom Range Slider */
+.form-range {
+  height: 6px;
+  background-color: var(--apple-gray-2);
+  border-radius: var(--apple-radius-pill);
+}
+
+.form-range::-webkit-slider-thumb {
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+
+.form-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Switch */
+.form-switch .form-check-input {
+  width: 2.4em;
+  height: 1.3em;
+  background-color: var(--apple-gray-2);
+  border-color: transparent;
+  cursor: pointer;
+}
+.form-switch .form-check-input:checked {
+  background-color: var(--apple-green);
+  border-color: var(--apple-green);
+}
+
+/* ==========================================================================
+   STAT CARDS & METRIC BADGES
+   ========================================================================== */
+.metric-box {
+  background: var(--apple-gray);
+  border-radius: var(--apple-radius-md);
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-bottom: 12px;
+  transition: all 0.25s var(--ease-apple);
+}
+
+.metric-box:hover {
+  background: #f0f0f4;
+  transform: translateX(2px);
+}
+
+.metric-lbl {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--apple-text-secondary);
+  margin-bottom: 4px;
+}
+
+.metric-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--apple-text);
+  letter-spacing: -0.02em;
+}
+
+.metric-val small {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--apple-text-secondary);
+}
+
+/* ==========================================================================
+   SIMULATOR CANVAS STYLING (PRECISION STUDIO CONSOLE)
+   ========================================================================== */
+.canvas-container {
+  background: #090c12;
+  border-radius: var(--apple-radius-md);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.canvas-pill-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f5f5f7;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--apple-radius-pill);
+}
+
+/* ==========================================================================
+   PROGRESS BARS & PHASE STEPS
+   ========================================================================== */
+.apple-progress {
+  height: 8px;
+  background: var(--apple-gray-2);
+  border-radius: var(--apple-radius-pill);
+  overflow: hidden;
+}
+
+.apple-progress-bar {
+  background: linear-gradient(90deg, var(--apple-blue), #5ac8fa);
+  border-radius: var(--apple-radius-pill);
+  transition: width 0.3s ease;
+}
+
+.step-tracker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .step-tracker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.step-pill {
+  background: var(--apple-gray);
+  border-radius: var(--apple-radius-sm);
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 0.3s var(--ease-apple);
+  opacity: 0.6;
+}
+
+.step-pill i {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--apple-text-secondary);
+}
+
+.step-pill .step-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.step-pill.active {
+  opacity: 1;
+  background: #ffffff;
+  border-color: var(--apple-blue);
+  box-shadow: 0 4px 14px rgba(0, 113, 227, 0.15);
+  transform: translateY(-2px);
+}
+
+.step-pill.active i {
+  color: var(--apple-blue);
+}
+
+.step-pill.done {
+  opacity: 1;
+  background: var(--apple-green-light);
+  border-color: rgba(52, 199, 89, 0.3);
+}
+
+.step-pill.done i {
+  color: var(--apple-green);
+}
+
+/* ==========================================================================
+   HERO SECTION (HOME)
+   ========================================================================== */
+.hero-card {
+  padding: 48px 40px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+  border-radius: var(--apple-radius-lg);
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--apple-shadow-sm);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 28px 20px;
+  }
+}
+
+.hero-lead-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  color: var(--apple-text);
+  margin-bottom: 16px;
+}
+
+.hero-lead-title span {
+  background: linear-gradient(135deg, var(--apple-blue), #5ac8fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-lead-desc {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  color: var(--apple-text-secondary);
+  line-height: 1.55;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 991px) {
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero-stat-card {
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius-md);
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: var(--apple-shadow-sm);
+  transition: all 0.3s var(--ease-apple);
+}
+
+.hero-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--apple-shadow-md);
+}
+
+.hero-stat-card .num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--apple-text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.hero-stat-card .cap {
+  font-size: 0.78rem;
+  color: var(--apple-text-secondary);
+  font-weight: 500;
+}
+
+/* Feature BENTO Cards */
+.bento-card {
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius-md);
+  padding: 26px;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-apple);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--apple-shadow-sm);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--apple-shadow-md);
+  border-color: rgba(0, 113, 227, 0.3);
+}
+
+.bento-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--apple-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+  transition: transform 0.3s var(--ease-apple);
+}
+
+.bento-card:hover .bento-icon {
+  transform: scale(1.08);
+}
+
+.bento-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--apple-text);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+
+.bento-desc {
+  font-size: 0.88rem;
+  color: var(--apple-text-secondary);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Process Timeline */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 991px) {
+  .process-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step-card {
+  background: var(--apple-gray);
+  border-radius: var(--apple-radius-sm);
+  padding: 18px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.process-step-card:hover {
+  background: #ffffff;
+  box-shadow: var(--apple-shadow-sm);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--apple-blue);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.step-heading {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--apple-text);
+  margin-bottom: 4px;
+}
+
+.step-details {
+  font-size: 0.8rem;
+  color: var(--apple-text-secondary);
+  line-height: 1.4;
+}
+
+/* Gallery Technical Illustrations */
+.tech-gallery-card {
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  border-radius: var(--apple-radius-md);
+  padding: 16px;
+  height: 100%;
+  transition: all 0.3s var(--ease-apple);
+  box-shadow: var(--apple-shadow-sm);
+}
+
+.tech-gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--apple-shadow-md);
+}
+
+.tech-gallery-card svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--apple-radius-sm);
+  background: #f7f7f9;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.tech-gallery-card h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--apple-text);
+  margin: 14px 0 4px;
+}
+
+/* ==========================================================================
+   G-CODE VIEWER & SYNTAX (APPLE DEVELOPER / XCODE STYLE)
+   ========================================================================== */
+.gcode-container {
+  background: #0f131a;
+  border-radius: var(--apple-radius-md);
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: #c9d1d9;
+  max-height: 360px;
+  overflow-y: auto;
+  line-height: 1.6;
+  white-space: pre;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.gcode-container .ln { color: #57606a; margin-right: 12px; user-select: none; }
+.gcode-container .gc { color: #ff7b72; font-weight: 600; }
+.gcode-container .ax { color: #79c0ff; }
+.gcode-container .fs { color: #d2a8ff; }
+.gcode-container .cm { color: #8b949e; font-style: italic; }
+
+/* ==========================================================================
+   TOOL CHIPS & BADGES
+   ========================================================================== */
+.iso-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  border-radius: var(--apple-radius-sm);
+  background: var(--apple-gray);
+  color: var(--apple-text);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin: 3px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.2s var(--ease-apple);
+}
+
+.iso-chip:hover, .iso-chip.on {
+  background: var(--apple-dark);
+  color: #ffffff;
+  border-color: var(--apple-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.iso-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   CHECKLIST & QUIZ
+   ========================================================================== */
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--apple-radius-sm);
+  background: var(--apple-gray);
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s var(--ease-apple);
+}
+
+.checklist-item:hover {
+  background: #f0f0f4;
+  transform: translateX(3px);
+}
+
+.check-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--apple-text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  color: transparent;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.checklist-item.on {
+  background: var(--apple-green-light);
+  border-color: rgba(52, 199, 89, 0.25);
+}
+
+.checklist-item.on .check-circle {
+  background: var(--apple-green);
+  border-color: var(--apple-green);
+  color: #ffffff;
+}
+
+/* Circular ring indicator */
+.completion-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--apple-text);
+  background: conic-gradient(var(--apple-green) var(--p, 0%), var(--apple-gray-2) 0);
+  position: relative;
+  transition: --p 0.5s ease;
+}
+
+.completion-ring::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.completion-ring span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Quiz questions */
+.quiz-opt-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: var(--apple-radius-sm);
+  background: var(--apple-gray);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 0.94rem;
+  color: var(--apple-text);
+  transition: all 0.2s var(--ease-apple);
+  cursor: pointer;
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+  background: #ffffff;
+  border-color: var(--apple-blue);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.1);
+  transform: translateX(4px);
+}
+
+.quiz-opt-btn.right {
+  background: var(--apple-green-light);
+  border-color: var(--apple-green);
+  color: #1a6f37;
+  font-weight: 600;
+}
+
+.quiz-opt-btn.wrong {
+  background: var(--apple-red-light);
+  border-color: var(--apple-red);
+  color: #b5221b;
+  font-weight: 600;
+}
+
+/* Notification banner / alerts */
+.apple-alert {
+  border-radius: var(--apple-radius-sm);
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-top: 12px;
+  border: 1px solid transparent;
+}
+
+.apple-alert.ok {
+  background: var(--apple-green-light);
+  border-color: rgba(52, 199, 89, 0.2);
+  color: #1c723a;
+}
+
+.apple-alert.warn {
+  background: var(--apple-amber-light);
+  border-color: rgba(255, 149, 0, 0.2);
+  color: #995c00;
+}
+
+.apple-alert.bad {
+  background: var(--apple-red-light);
+  border-color: rgba(255, 59, 48, 0.2);
+  color: #af221b;
+}
+
+/* ==========================================================================
+   TOAST & FLOATING BACK TO TOP
+   ========================================================================== */
+#appleToast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 60px);
+  background: rgba(29, 29, 31, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: var(--apple-radius-pill);
+  font-size: 0.84rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s var(--ease-apple);
+  z-index: 2000;
+}
+
+#appleToast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+#toTop {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  z-index: 999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  box-shadow: var(--apple-shadow-md);
+  color: var(--apple-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s var(--ease-apple);
+}
+
+#toTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#toTop:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--apple-shadow-lg);
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 12px;
+  z-index: 3000;
+  border-radius: 2px;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--apple-border);
+  padding: 36px 0;
+  text-align: center;
+  background: #ffffff;
+  color: var(--apple-text-secondary);
+  font-size: 0.82rem;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-subtle-glow"></div>
+
+<!-- ==========================================================================
+     APPLE-STYLE STICKY GLASS HEADER & NAVIGATION
+     ========================================================================== -->
+<header class="site-header">
+  <div class="container-xl">
+    <div class="header-top">
+      <a href="#home" class="brand-badge" onclick="goTab('home'); return false;">
+        <div class="brand-icon"><i class="fa-solid fa-microchip"></i></div>
+        <div>
+          <span style="display:block; font-size:1.02rem; font-weight:800; line-height:1.15">PRECISION CNC</span>
+          <span style="display:block; font-size:0.72rem; color:var(--apple-text-secondary); font-weight:500">Stanoklar &amp; Muhandislik Portali</span>
+        </div>
+      </a>
+      
+      <div class="d-flex align-items-center gap-2">
+        <span class="status-pill d-none d-sm-inline-flex">
+          <span class="pulse-dot"></span> Tizim faol
+        </span>
+        <span class="status-pill">
+          <i class="fa-regular fa-clock" style="font-size:0.8rem"></i>
+          <span id="clock">--:--:--</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Segmented Navigation Pills -->
+    <div class="nav-scroll-wrap">
+      <ul class="nav apple-nav-pills" id="mainTab" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#home" type="button">
+            <i class="fa-solid fa-house"></i> Bosh sahifa
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#k80" type="button">
+            <i class="fa-solid fa-circle-notch"></i> K 80 Rastochka
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#hankook" type="button">
+            <i class="fa-solid fa-industry"></i> Hankook 90/120
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#frezer" type="button">
+            <i class="fa-solid fa-compact-disc"></i> Frezerlik
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#calc" type="button">
+            <i class="fa-solid fa-calculator"></i> Kalkulyator
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#gcode" type="button">
+            <i class="fa-solid fa-code"></i> G-Kod Generator
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tools" type="button">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Asboblar
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#safety" type="button">
+            <i class="fa-solid fa-shield-halved"></i> Xavfsizlik
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#quiz" type="button">
+            <i class="fa-solid fa-award"></i> Bilim testi
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- ==========================================================================
+     MAIN CONTENT WRAPPER
+     ========================================================================== -->
+<main class="main-wrapper">
+<div class="tab-content" id="mainTabContent">
+
+<!-- ==========================================
+     TAB 1: BOSH SAHIFA (HOME)
+     ========================================== -->
+<div class="tab-pane fade show active" id="home" role="tabpanel">
+  <!-- Hero Section -->
+  <div class="hero-card">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="card-eyebrow">Professional Muhandislik &amp; Simulyatsiya</span>
+        <h1 class="hero-lead-title">Metallga ishlov berish.<br><span>Mutlaq aniqlikda.</span></h1>
+        <p class="hero-lead-desc">
+          K 80 rastochka jarayoni, Janubiy Koreyaning yirik Hankook 90/120 vertikal stanogi va tezyurar frezerlash simulyatsiyalari. Real vaqt hisoblari, FANUC G-kod generatori va asboblar katalogi — minimalistik va toza interfeysda.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn-apple-primary btn-apple-blue" onclick="goTab('k80')">
+            <i class="fa-solid fa-play"></i> K 80 Simulyatsiyasi
+          </button>
+          <button class="btn-apple-secondary" onclick="goTab('calc')">
+            <i class="fa-solid fa-calculator"></i> Rejimlar Kalkulyatori
+          </button>
+          <button class="btn-apple-secondary" onclick="goTab('gcode')">
+            <i class="fa-solid fa-code"></i> G-Kod Yaratish
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-lg-5 text-center">
+        <!-- Minimalist Hero Graphic -->
+        <div style="background:#ffffff; border:1px solid var(--apple-border); border-radius:24px; padding:24px; box-shadow:var(--apple-shadow-md);">
+          <svg id="heroGears" viewBox="0 0 420 280" style="width:100%; height:auto;"></svg>
+          <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+            <span style="font-size:0.75rem; font-weight:600; color:var(--apple-text-secondary); text-transform:uppercase">
+              <i class="fa-solid fa-circle-check text-success me-1"></i>H7 Aniqlik Sinfi
+            </span>
+            <span style="font-size:0.78rem; font-weight:700; color:var(--apple-text)">Ø80.00 (+0.030 / 0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Metrics Ribbon -->
+  <div class="counter-grid">
+    <div class="hero-stat-card">
+      <div class="num"><span class="count" data-to="80" data-dec="0">0</span> <small style="font-size:1.1rem; color:var(--apple-blue)">mm</small></div>
+      <div class="cap">K 80 Posadka Diametri (H7)</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="num"><span class="count" data-to="120" data-dec="0">0</span> <small style="font-size:1.1rem; color:var(--apple-blue)">mm</small></div>
+      <div class="cap">Rastochka Chuqurligi</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="num"><span class="count" data-to="45" data-dec="0">0</span> <small style="font-size:1.1rem; color:var(--apple-blue)">kW</small></div>
+      <div class="cap">Hankook Asosiy Motor Quvvati</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="num"><span class="count" data-to="10" data-dec="0">0</span> <small style="font-size:1.1rem; color:var(--apple-blue)">t</small></div>
+      <div class="cap">Maksimal Detal Og'irligi</div>
+    </div>
+  </div>
+
+  <!-- Bento Grid: Core Interactive Features -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="bento-card" onclick="goTab('k80')">
+        <div class="bento-icon" style="background:var(--apple-blue-light); color:var(--apple-blue)">
+          <i class="fa-solid fa-circle-notch"></i>
+        </div>
+        <h4 class="bento-title">K 80 Rastochka</h4>
+        <p class="bento-desc">Ø76 dan Ø80 H7 gacha xomaki va toza o'tishlar, qirindi dinamikasi va SOJ oqimi.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="bento-card" onclick="goTab('hankook')">
+        <div class="bento-icon" style="background:rgba(29, 29, 31, 0.08); color:var(--apple-dark)">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+        <h4 class="bento-title">Hankook 90/120</h4>
+        <p class="bento-desc">Ø1200 mm gacha bo'lgan og'ir vertikal tokarlik stanogi, burilma stol va yuklama nazorati.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="bento-card" onclick="goTab('frezer')">
+        <div class="bento-icon" style="background:var(--apple-green-light); color:var(--apple-green)">
+          <i class="fa-solid fa-compact-disc"></i>
+        </div>
+        <h4 class="bento-title">Frezerlash</h4>
+        <p class="bento-desc">Ko'p tishli torets freza yordamida yuzaga ishlov berish, tishga uzatish fz tahlili.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="bento-card" onclick="goTab('gcode')">
+        <div class="bento-icon" style="background:var(--apple-amber-light); color:var(--apple-amber)">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h4 class="bento-title">G-Kod &amp; Trayektoriya</h4>
+        <p class="bento-desc">FANUC boshqaruv dasturi generatsiyasi, .nc formatida yuklab olish va jonli trayektoriya.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Machining Pipeline -->
+  <div class="apple-card">
+    <span class="card-eyebrow">Ishlov Berish Ketma-ketligi</span>
+    <h3 class="card-title">K 80 Rastochka Texnologik Bosqichlari</h3>
+    <p class="card-subtitle">Metallni qayta ishlashda mikron darajasidagi aniqlikka erishish algoritmi.</p>
+    
+    <div class="process-flow">
+      <div class="process-step-card">
+        <div class="step-number">01. Bazalash</div>
+        <div class="step-heading">Mahkamlash</div>
+        <div class="step-details">Detalni 4 kulachokli patronga urilishsiz (bietiye) o'rnatish.</div>
+      </div>
+      <div class="process-step-card">
+        <div class="step-number">02. Xomaki o'tish</div>
+        <div class="step-heading">Ø76 → Ø78 mm</div>
+        <div class="step-details">Katta kesish chuqurligi ap va uzatish f = 0.20 mm/ob bilan metallni tez olish.</div>
+      </div>
+      <div class="process-step-card">
+        <div class="step-number">03. Toza yo'nish</div>
+        <div class="step-heading">Ø78 → Ø80 H7</div>
+        <div class="step-details">Kichik uzatish f = 0.08 mm/ob, SOJ oqimi ostida yuza tozaligi Ra 1.6 ga chiqish.</div>
+      </div>
+      <div class="process-step-card">
+        <div class="step-number">04. Metrologiya</div>
+        <div class="step-heading">Nazorat o'lchov</div>
+        <div class="step-details">Nutromer yoki kalibr-probka (o'tadi/o'tmaydi) bilan tekshirish.</div>
+      </div>
+      <div class="process-step-card">
+        <div class="step-number">05. Tayyor</div>
+        <div class="step-heading">Ø80 (+0.030 / 0)</div>
+        <div class="step-details">H7 standarti bo'yicha ruxsat etilgan tolerans oralig'ida qabul qilish.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Blueprints Gallery -->
+  <div class="apple-card mb-0">
+    <span class="card-eyebrow">Texnik Vizualizatsiya</span>
+    <h3 class="card-title">Stanoklarning sxematik kesimi va kinematikasi</h3>
+    <p class="card-subtitle">Ichki tuzilishi va ishchi organlarining o'zaro harakati.</p>
+    
+    <div class="row g-3">
+      <!-- Boring Bar Cut -->
+      <div class="col-md-4">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 320 200">
+            <defs>
+              <pattern id="cleanHatch1" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="10" stroke="#d2d2d7" stroke-width="1.2"/>
+              </pattern>
+            </defs>
+            <rect x="25" y="40" width="45" height="120" fill="#48484a" rx="3"/>
+            <rect x="70" y="50" width="200" height="100" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1.5"/>
+            <rect x="70" y="50" width="200" height="100" fill="url(#cleanHatch1)"/>
+            <rect x="70" y="85" width="200" height="30" fill="#090c12"/>
+            <line x1="10" y1="100" x2="310" y2="100" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="6 4"/>
+            <g>
+              <animateTransform attributeName="transform" type="translate" values="0 0;175 0;0 0" dur="6s" repeatCount="indefinite"/>
+              <rect x="-220" y="93" width="290" height="14" fill="#8e8e93" rx="2"/>
+              <polygon points="70,93 62,87 56,93 62,99" fill="#0071e3"/>
+              <circle cx="62" cy="87" r="2.5" fill="#ffd60a">
+                <animate attributeName="opacity" values="1;0.2;1" dur=".3s" repeatCount="indefinite"/>
+              </circle>
+            </g>
+            <text x="160" y="185" font-family="-apple-system, Inter" font-size="11" font-weight="600" fill="#1d1d1f" text-anchor="middle">Ø80 H7 · L = 120 mm</text>
+          </svg>
+          <h6>K 80 Rastochka Kesimi</h6>
+          <div style="font-size:0.82rem; color:var(--apple-text-secondary)">Boring bar korpus ichiga kirib, teshikni mikron aniqlikda yo'nadi.</div>
+        </div>
+      </div>
+
+      <!-- Vertical Lathe -->
+      <div class="col-md-4">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 320 200">
+            <rect x="20" y="176" width="280" height="18" fill="#48484a" rx="3"/>
+            <rect x="60" y="156" width="200" height="20" fill="#636366" rx="2"/>
+            <rect x="95" y="122" width="130" height="34" fill="#8e8e93" rx="2"/>
+            <line x1="100" y1="139" x2="220" y2="139" stroke="#ffffff" stroke-width="3" stroke-dasharray="6 8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-28" dur=".7s" repeatCount="indefinite"/>
+            </line>
+            <rect x="40" y="20" width="22" height="156" fill="#8e8e93"/>
+            <rect x="258" y="20" width="22" height="156" fill="#8e8e93"/>
+            <rect x="40" y="48" width="240" height="18" fill="#aeaeb2" rx="2"/>
+            <g>
+              <animateTransform attributeName="transform" type="translate" values="-70 0;70 0;-70 0" dur="7s" repeatCount="indefinite"/>
+              <rect x="146" y="40" width="32" height="34" fill="#0071e3" rx="3"/>
+              <rect x="155" y="74" width="14" height="46" fill="#48484a"/>
+              <polygon points="155,120 169,120 162,127" fill="#ff9500"/>
+            </g>
+            <text x="160" y="18" font-family="-apple-system, Inter" font-size="11" font-weight="700" fill="#1d1d1f" text-anchor="middle">Hankook 90/120 Vertikal Stanok</text>
+          </svg>
+          <h6>Hankook 90/120 Vertikal</h6>
+          <div style="font-size:0.82rem; color:var(--apple-text-secondary)">Ø1200 gacha gardish va korpus detallari uchun aylanuvchi stol va suport.</div>
+        </div>
+      </div>
+
+      <!-- Milling -->
+      <div class="col-md-4">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 320 200">
+            <rect x="40" y="130" width="240" height="46" fill="#8e8e93" rx="2"/>
+            <rect x="30" y="176" width="260" height="14" fill="#48484a" rx="2"/>
+            <g>
+              <animateTransform attributeName="transform" type="translate" values="-80 0;80 0;-80 0" dur="6s" repeatCount="indefinite"/>
+              <rect x="152" y="10" width="16" height="62" fill="#636366"/>
+              <rect x="120" y="72" width="80" height="40" rx="6" fill="#1d1d1f"/>
+              <rect x="124" y="108" width="12" height="10" fill="#ff9500">
+                <animate attributeName="x" values="124;186;124" dur=".5s" repeatCount="indefinite"/>
+              </rect>
+              <rect x="124" y="108" width="12" height="10" fill="#ff9500">
+                <animate attributeName="x" values="155;124;186;155" dur=".5s" repeatCount="indefinite"/>
+              </rect>
+              <line x1="215" y1="40" x2="196" y2="112" stroke="#5ac8fa" stroke-width="2.5" stroke-dasharray="4 4">
+                <animate attributeName="stroke-dashoffset" from="0" to="-16" dur=".4s" repeatCount="indefinite"/>
+              </line>
+            </g>
+            <text x="160" y="20" font-family="-apple-system, Inter" font-size="11" font-weight="700" fill="#1d1d1f" text-anchor="middle">Torets Frezerlash</text>
+          </svg>
+          <h6>Torets Frezerlash</h6>
+          <div style="font-size:0.82rem; color:var(--apple-text-secondary)">Aylanuvchi tishlar tekis yuzani qatlam-qatlam minimal qoldiq bilan tekislaydi.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 2: K 80 RASTOCHKA SIMULATOR
+     ========================================== -->
+<div class="tab-pane fade" id="k80" role="tabpanel">
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <div class="apple-card">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+          <div>
+            <span class="card-eyebrow">Interaktiv 2D Simulyator</span>
+            <h3 class="card-title mb-0">K 80 Rastochka Jarayoni</h3>
+          </div>
+          <button class="btn-apple-outline" id="btnSoj">
+            <i class="fa-solid fa-droplet text-primary"></i> SOJ Suyuqligi: <span id="sojStatus" class="fw-bold">YONIQ</span>
+          </button>
+        </div>
+
+        <div class="canvas-container">
+          <span class="canvas-pill-tag">LIVE 2D · KESIM TASVIRI</span>
+          <canvas id="boringCanvas" width="800" height="400"></canvas>
+        </div>
+
+        <div class="apple-progress mt-3">
+          <div class="apple-progress-bar" id="boringProg" style="width:0%"></div>
+        </div>
+
+        <!-- Controls Dock -->
+        <div class="row g-3 mt-2 align-items-center">
+          <div class="col-sm-4">
+            <button id="btnStartBoring" class="btn-apple-primary btn-apple-blue w-100">
+              <i class="fa-solid fa-play"></i> Boshlash
+            </button>
+          </div>
+          <div class="col-sm-4">
+            <button id="btnResetBoring" class="btn-apple-secondary w-100">
+              <i class="fa-solid fa-rotate-left"></i> Qaytadan
+            </button>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center gap-2 p-2 bg-light rounded-3">
+              <span class="small fw-semibold text-secondary">Tezlik:</span>
+              <input type="range" class="form-range" id="boringSpeed" min="1" max="5" value="2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step Tracker -->
+      <div class="apple-card">
+        <h4 class="card-title h6 mb-3"><i class="fa-solid fa-list-check text-primary me-2"></i>Operatsiya Bosqichlari</h4>
+        <div class="step-tracker" id="boringSteps">
+          <div class="step-pill" data-s="0">
+            <i class="fa-solid fa-bullseye"></i>
+            <div class="step-text">1. Boshlang'ich (Ø76)</div>
+          </div>
+          <div class="step-pill" data-s="1">
+            <i class="fa-solid fa-hammer"></i>
+            <div class="step-text">2. Xomaki (Ø78)</div>
+          </div>
+          <div class="step-pill" data-s="2">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div class="step-text">3. Toza (Ø80)</div>
+          </div>
+          <div class="step-pill" data-s="3">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="step-text">4. Nazorat (H7)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Telemetry Side Panel -->
+    <div class="col-lg-4">
+      <div class="apple-card">
+        <span class="card-eyebrow">Real Vaqt Telemetriyasi</span>
+        <h4 class="card-title h6 mb-3">Jarayon Ko'rsatkichlari</h4>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Teshik Diametri</div>
+          <div class="metric-val">Ø <span id="liveDia">76.00</span> <small>→</small> 80.00 mm <small>(H7)</small></div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Rastochka Chuqurligi</div>
+          <div class="metric-val" id="liveDepth">0.0 / 120 mm</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Shpindel Aylanish Tezligi</div>
+          <div class="metric-val" id="liveRPM">0 RPM</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Joriy Bosqich</div>
+          <div class="metric-val" id="livePhase">Kutilmoqda</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Taxminiy Ishlov Vaqti</div>
+          <div class="metric-val" id="liveTime">—</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Yuza G'adir-budurligi (Ra)</div>
+          <div class="metric-val" id="liveRa">—</div>
+        </div>
+
+        <div class="p-3 bg-light rounded-3 mt-3">
+          <div class="small fw-bold text-dark mb-1"><i class="fa-solid fa-lightbulb text-warning me-1"></i> Muhandis tavsiyasi:</div>
+          <div class="small text-secondary" style="line-height:1.45">
+            Tebranishni kamaytirish uchun boring bar uzunligi uning diametridan 4 baravardan oshmasligi (L/D &le; 4) lozim. Toza yo'nishda uzatish f = 0.08 mm/ob orqali Ra 1.6 sifatiga erishiladi.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 3: HANKOOK 90/120 VERTICAL LATHE
+     ========================================== -->
+<div class="tab-pane fade" id="hankook" role="tabpanel">
+  <div class="apple-card">
+    <div class="row align-items-center mb-3">
+      <div class="col-md-8">
+        <span class="card-eyebrow">Janubiy Koreya Og'ir Sanoat Texnologiyasi</span>
+        <h3 class="card-title">Hankook 90/120 Og'ir Vertikal Tokarlik Stanogi</h3>
+        <p class="card-subtitle mb-0">Katta diametrli flaneslar, g'ildiraklar va disklar uchun gorizontal aylanuvchi burilma stol.</p>
+      </div>
+      <div class="col-md-4 text-md-end mt-2 mt-md-0">
+        <span class="status-pill"><i class="fa-solid fa-gauge-high me-1"></i> Maks: Ø1200 mm / 10 tonna</span>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="canvas-container">
+          <span class="canvas-pill-tag">HANKOOK · YUQORIDAN KO'RINISH</span>
+          <canvas id="hankookCanvas" width="800" height="420"></canvas>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="apple-card bg-light p-3 mb-3 border-0">
+          <h5 class="fw-bold fs-6 mb-3">Boshqaruv Paneli</h5>
+          <div class="mb-3">
+            <label class="form-label">Detal Diametri</label>
+            <select class="form-select apple-input" id="hankookDiameter">
+              <option value="900">Ø 900 mm (O'rta o'lcham)</option>
+              <option value="1200" selected>Ø 1200 mm (Maksimal gabarit)</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label">Aylanish Tezligi</label>
+              <span class="small fw-bold text-primary"><span id="hkSpeedLbl">36</span> ayl/min</span>
+            </div>
+            <input type="range" class="form-range" id="hankookSpeed" min="1" max="100" value="30">
+          </div>
+          <button id="btnHankookRun" class="btn-apple-primary btn-apple-blue w-100">
+            <i class="fa-solid fa-power-off"></i> Spindelni Ishga Tushirish
+          </button>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Aylanish Oboroti</div>
+          <div class="metric-val" id="hkRPM">0 ayl/min</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Chiziqli Kesish Tezligi (Vc)</div>
+          <div class="metric-val" id="hkVc">0 m/min</div>
+        </div>
+
+        <div id="hkWarn" class="apple-alert ok mb-3">
+          <i class="fa-solid fa-circle-check me-1"></i> Rejim optimal (po'lat uchun mos).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hankook Applications Grid -->
+  <div class="apple-card mb-0">
+    <span class="card-eyebrow">Qo'llanilish Sohalari</span>
+    <h4 class="card-title h6 mb-3">Hankook 90/120 da Bajariladigan Asosiy Operatsiyalar</h4>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <div class="p-3 bg-light rounded-3 text-center h-100">
+          <i class="fa-solid fa-circle-notch text-primary fs-3 mb-2"></i>
+          <div class="fw-bold small">Tashqi Yo'nish</div>
+          <div class="text-secondary small mt-1">Yirik gardish va flanes diametrlarini tekislash</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 bg-light rounded-3 text-center h-100">
+          <i class="fa-solid fa-bullseye text-success fs-3 mb-2"></i>
+          <div class="fw-bold small">Katta Rastochka</div>
+          <div class="text-secondary small mt-1">Ichki posadka va silindr chuqurliklarini yo'nish</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 bg-light rounded-3 text-center h-100">
+          <i class="fa-solid fa-grip-lines text-warning fs-3 mb-2"></i>
+          <div class="fw-bold small">Toretsga Ishlov</div>
+          <div class="text-secondary small mt-1">Tekis yuzalarni qatlam bo'ylab tekislash</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 bg-light rounded-3 text-center h-100">
+          <i class="fa-solid fa-screwdriver text-danger fs-3 mb-2"></i>
+          <div class="fw-bold small">Ariqcha &amp; Rezba</div>
+          <div class="text-secondary small mt-1">Zichlagich (salnik) ariqchalari va yirik rezbalar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 4: FREZERLIK STANOGI
+     ========================================== -->
+<div class="tab-pane fade" id="frezer" role="tabpanel">
+  <div class="apple-card">
+    <div class="row align-items-center mb-3">
+      <div class="col-md-8">
+        <span class="card-eyebrow">Yuzalarni Qatlamli Tekislash</span>
+        <h3 class="card-title">Torets Frezerlash Simulyatori (Face Milling)</h3>
+        <p class="card-subtitle mb-0">Ko'p tishli freza golovkasi yordamida yuzaga ishlov berish va tishga uzatish fz tahlili.</p>
+      </div>
+      <div class="col-md-4 text-md-end mt-2 mt-md-0">
+        <span class="status-pill"><i class="fa-solid fa-compact-disc me-1"></i> Freza: Ø100 mm / 6 tishli</span>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="canvas-container">
+          <span class="canvas-pill-tag">MILLING · SOJ + QIRINDI CHIQISHI</span>
+          <canvas id="millingCanvas" width="800" height="400"></canvas>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="apple-card bg-light p-3 mb-3 border-0">
+          <h5 class="fw-bold fs-6 mb-3">Frezerlash Parametrlari</h5>
+          <button id="btnMillingRun" class="btn-apple-primary btn-apple-blue w-100 mb-3">
+            <i class="fa-solid fa-play"></i> Frezerlashni Boshlash
+          </button>
+          
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label">Shpindel Oboroti</label>
+              <span class="small fw-bold text-primary"><span id="mnLbl">600</span> ayl/min</span>
+            </div>
+            <input type="range" class="form-range" id="millRPM" min="150" max="1200" step="10" value="600">
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label">Stol Minutli Uzatishi (Vf)</label>
+              <span class="small fw-bold text-primary"><span id="vfLbl">240</span> mm/min</span>
+            </div>
+            <input type="range" class="form-range" id="millFeed" min="50" max="800" step="10" value="240">
+          </div>
+
+          <div class="form-check form-switch mt-2">
+            <input class="form-check-input" type="checkbox" id="millSoj" checked>
+            <label class="form-check-label small fw-semibold" for="millSoj">SOJ ta'minoti faol</label>
+          </div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Chiziqli Kesish Tezligi (Vc)</div>
+          <div class="metric-val" id="mVc">0 m/min</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-lbl">Bitta Tishga Uzatish (fz)</div>
+          <div class="metric-val" id="mFz">0.00 mm/tish</div>
+        </div>
+
+        <div id="mAdvice" class="apple-alert ok">
+          <i class="fa-solid fa-circle-check me-1"></i> fz optimal oraliqda (0.05 – 0.25 mm/tish).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 5: KESISH REJIMLARI KALKULYATORI
+     ========================================== -->
+<div class="tab-pane fade" id="calc" role="tabpanel">
+  <div class="apple-card">
+    <span class="card-eyebrow">Muhandislik Hisoblari</span>
+    <h3 class="card-title">Kesish Rejimlari, Ishlov Vaqti va Motor Yuklamasi</h3>
+    <p class="card-subtitle">Material xususiyatlari, diametr va uzatish asosida shpindel oboroti, sarflanadigan quvvat va nazariy tozalikni aniqlang.</p>
+
+    <div class="row g-4">
+      <!-- Input Parameters -->
+      <div class="col-lg-5">
+        <div class="apple-card bg-light border-0 p-3 h-100">
+          <h5 class="fw-bold fs-6 mb-3"><i class="fa-solid fa-sliders text-primary me-2"></i>Kiritish Ma'lumotlari</h5>
+          
+          <div class="row g-2">
+            <div class="col-6">
+              <label class="form-label">Material</label>
+              <select class="form-select apple-input" id="cMat">
+                <option value="steel">Po'lat 45</option>
+                <option value="stainless">Zanglamaydigan po'lat</option>
+                <option value="cast">Cho'yan (Kulrang)</option>
+                <option value="alu">Alyuminiy qotishmasi</option>
+                <option value="ti">Titan qotishmasi</option>
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Operatsiya Turi</label>
+              <select class="form-select apple-input" id="cOp">
+                <option value="bore">Rastochka (ichki)</option>
+                <option value="turn">Tashqi yo'nish</option>
+                <option value="mill">Frezerlash</option>
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="lD">Diametr D, mm</label>
+              <input type="number" class="form-control apple-input" id="cDiameter" value="80">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Kesish Tezligi Vc, m/min</label>
+              <input type="number" class="form-control apple-input" id="cVc" value="160">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="lF">Uzatish f, mm/ob</label>
+              <input type="number" class="form-control apple-input" id="cFeed" value="0.12" step="0.01">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Ishlov Uzunligi L, mm</label>
+              <input type="number" class="form-control apple-input" id="cLength" value="120">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Kesish Chuqurligi ap, mm</label>
+              <input type="number" class="form-control apple-input" id="cAp" value="1" step="0.1">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Plastinka Radiusi r, mm</label>
+              <select class="form-select apple-input" id="cR">
+                <option>0.2</option>
+                <option selected>0.4</option>
+                <option>0.8</option>
+                <option>1.2</option>
+              </select>
+            </div>
+
+            <div class="col-12" id="zWrap" style="display:none">
+              <label class="form-label">Freza Tishlari Soni (z)</label>
+              <input type="number" class="form-control apple-input" id="cZ" value="6">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculated Results -->
+      <div class="col-lg-7">
+        <div class="apple-card bg-light border-0 p-3 h-100">
+          <h5 class="fw-bold fs-6 mb-3"><i class="fa-solid fa-square-poll-vertical text-success me-2"></i>Hisob Natijalari</h5>
+          
+          <div class="row g-2 mb-3">
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Shpindel Oboroti (n)</div>
+                <div class="metric-val text-primary" id="resRPMVal">—</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Minutli Uzatish (Vf)</div>
+                <div class="metric-val" id="resVfVal">—</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Asosiy Kesish Vaqti (Tm)</div>
+                <div class="metric-val" id="resTime">—</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Qirindi Ajralish Hajmi (Q)</div>
+                <div class="metric-val" id="resQ">—</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Kesish Quvvati (Pc / Pm)</div>
+                <div class="metric-val" id="resP">—</div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="metric-box bg-white">
+                <div class="metric-lbl">Nazariy Yuza G'adir-budurligi</div>
+                <div class="metric-val" id="resRa">—</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-2">
+            <div class="d-flex justify-content-between small text-secondary fw-semibold mb-1">
+              <span>Motor Yuklamasi (45 kW ga nisbatan):</span>
+            </div>
+            <div class="apple-progress">
+              <div class="apple-progress-bar" id="pBar" style="width:0%"></div>
+            </div>
+          </div>
+
+          <div id="calcAdvice" class="apple-alert ok"></div>
+        </div>
+      </div>
+
+      <!-- Curve Graphic: RPM vs Diameter -->
+      <div class="col-12">
+        <div class="p-3 bg-white rounded-3 border">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="small fw-bold text-dark"><i class="fa-solid fa-chart-line text-primary me-1"></i> Diametr va Oborot Bog'liqlik Grafigi (n = 1000·Vc / π·D)</span>
+            <span class="small text-secondary">Qizil nuqta — joriy ishchi parametr</span>
+          </div>
+          <canvas id="rpmChart" width="900" height="220" style="width:100%; height:auto; display:block;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 6: G-KOD GENERATOR & TRAYEKTORIYA
+     ========================================== -->
+<div class="tab-pane fade" id="gcode" role="tabpanel">
+  <div class="apple-card">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+      <div>
+        <span class="card-eyebrow">CNC Dasturlash</span>
+        <h3 class="card-title mb-0">FANUC &amp; ISO Avtomatik G-Kod Generator</h3>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn-apple-outline" id="btnCopy">
+          <i class="fa-regular fa-copy me-1"></i> Nusxalash
+        </button>
+        <button class="btn-apple-primary btn-apple-blue py-2 px-3 fs-7" id="btnDl">
+          <i class="fa-solid fa-download me-1"></i> .nc Yuklab Olish
+        </button>
+      </div>
+    </div>
+    <p class="card-subtitle">Ishlov turi, o'lcham va rejimlarni belgilang — tayyor kod va trayektoriyani oling.</p>
+
+    <div class="row g-4">
+      <!-- Settings -->
+      <div class="col-lg-4">
+        <div class="apple-card bg-light border-0 p-3 h-100">
+          <h5 class="fw-bold fs-6 mb-3">Dastur Parametrlari</h5>
+          
+          <div class="row g-2">
+            <div class="col-12">
+              <label class="form-label">Operatsiya</label>
+              <select class="form-select apple-input" id="gOp">
+                <option value="bore">K 80 Rastochka (ichki teshik)</option>
+                <option value="turn">Tashqi yo'nish</option>
+                <option value="mill">Torets frezerlash</option>
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Dastur Nomeri</label>
+              <input class="form-control apple-input" id="gProgNo" value="O0080">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="gL1">Yakuniy Ø, mm</label>
+              <input type="number" class="form-control apple-input" id="gDia" value="80">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="gL2">Dastlabki Teshik Ø</label>
+              <input type="number" class="form-control apple-input" id="gStock" value="76">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="gL3">Chuqurlik, mm</label>
+              <input type="number" class="form-control apple-input" id="gDepth" value="120">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">Oborot (S)</label>
+              <input type="number" class="form-control apple-input" id="gRPM" value="650">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">F xomaki</label>
+              <input type="number" step="0.01" class="form-control apple-input" id="gFR" value="0.20">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label">F toza</label>
+              <input type="number" step="0.01" class="form-control apple-input" id="gFF" value="0.08">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label" id="gL4">ap (radial), mm</label>
+              <input type="number" step="0.1" class="form-control apple-input" id="gAp" value="0.8">
+            </div>
+
+            <div class="col-12 mt-2">
+              <div class="form-check form-switch mb-1">
+                <input class="form-check-input" type="checkbox" id="gCss">
+                <label class="form-check-label small" for="gCss">G96 doimiy Vc (tezlik)</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="gNum" checked>
+                <label class="form-check-label small" for="gNum">Qatorlarni N bilan raqamlash</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-apple-primary btn-apple-blue w-100 mt-3" id="btnGen">
+            <i class="fa-solid fa-arrows-rotate"></i> Kodni Qayta Generatsiya Qilish
+          </button>
+        </div>
+      </div>
+
+      <!-- Output & Visualizer -->
+      <div class="col-lg-8">
+        <div class="gcode-container mb-2" id="gcodeOutput"></div>
+        <div id="gcodeInfo" class="small text-secondary mb-3"></div>
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="small fw-bold text-dark"><i class="fa-solid fa-route text-primary me-1"></i> Asbob Trayektoriyasi Animatsiyasi</span>
+          <span class="small text-secondary">Yashil: ish yurishi (G01) | Qizil chiziqcha: tez yurish (G00)</span>
+        </div>
+        <div class="canvas-container">
+          <canvas id="pathCanvas" width="800" height="260"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 7: ASBOBLAR VA STANDARTLAR KATALOGI
+     ========================================== -->
+<div class="tab-pane fade" id="tools" role="tabpanel">
+  <div class="apple-card">
+    <span class="card-eyebrow">Asboblar Bazasi</span>
+    <h3 class="card-title">Metall Kesuvchi Asboblar va Plastinkalar</h3>
+    <p class="card-subtitle">K 80 va vertikal stanoklarda ishlatiladigan universal asboblar namunalari.</p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 200 110">
+            <rect x="10" y="48" width="140" height="16" fill="#8e8e93" rx="2"/>
+            <rect x="0" y="36" width="30" height="40" fill="#48484a" rx="3"/>
+            <polygon points="150,48 170,40 176,52 150,64" fill="#0071e3"/>
+          </svg>
+          <h6>Boring Bar (Rastochka Go'lagi)</h6>
+          <div class="small text-secondary">Ichki diametrlarni kengaytirish. L/D &le; 4 nisbatida tebranishsiz ishlaydi.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 200 110">
+            <polygon points="100,14 150,55 100,96 50,55" fill="#ff9500" stroke="#1d1d1f" stroke-width="2"/>
+            <circle cx="100" cy="55" r="10" fill="#ffffff"/>
+          </svg>
+          <h6>CCMT 09T304 Plastinka</h6>
+          <div class="small text-secondary">80&deg; rombsimon, uchi radiusi r = 0.4 mm. Po'lat va cho'yan uchun universal.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 200 110">
+            <circle cx="100" cy="55" r="44" fill="#1d1d1f"/>
+            <circle cx="100" cy="55" r="12" fill="#ffffff"/>
+            <rect x="92" y="6" width="16" height="12" fill="#ff9500"/>
+            <rect x="92" y="92" width="16" height="12" fill="#ff9500"/>
+            <rect x="142" y="47" width="12" height="16" fill="#ff9500"/>
+            <rect x="46" y="47" width="12" height="16" fill="#ff9500"/>
+          </svg>
+          <h6>Torets Freza Golovkasi</h6>
+          <div class="small text-secondary">Ø100 mm, 6 ta almashinuvchi qattiq qotishma plastinkaga ega.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="tech-gallery-card">
+          <svg viewBox="0 0 200 110">
+            <rect x="10" y="45" width="40" height="20" fill="#8e8e93" rx="2"/>
+            <path d="M50 45 L170 50 L185 55 L170 60 L50 65Z" fill="#aeaeb2"/>
+            <g stroke="#48484a" stroke-width="2">
+              <line x1="70" y1="46" x2="85" y2="64"/>
+              <line x1="95" y1="47" x2="110" y2="63"/>
+              <line x1="120" y1="48" x2="135" y2="62"/>
+            </g>
+          </svg>
+          <h6>Spiral Parma (Burg'u)</h6>
+          <div class="small text-secondary">Ø76 dastlabki teshik ochish uchun, undan so'ng boring bar bilan ishlanadi.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISO Materials & Tolerance -->
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="apple-card bg-light border-0 p-3 h-100">
+          <h5 class="fw-bold fs-6 mb-3"><i class="fa-solid fa-layer-group text-primary me-2"></i>ISO Guruhlari va Tavsiya Etilgan Vc</h5>
+          <div class="table-responsive">
+            <table class="table table-borderless align-middle mb-0">
+              <thead>
+                <tr class="text-secondary small border-bottom">
+                  <th>Guruh</th>
+                  <th>Material Guruhi</th>
+                  <th>Vc (m/min)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="iso-badge" style="background:#0071e3">P</span></td>
+                  <td><strong>Po'lat</strong> (Uglerodli va legirlangan)</td>
+                  <td>150 – 250</td>
+                </tr>
+                <tr>
+                  <td><span class="iso-badge" style="background:#ff9500">M</span></td>
+                  <td><strong>Zanglamaydigan po'lat</strong> (Nerjaveyka)</td>
+                  <td>100 – 200</td>
+                </tr>
+                <tr>
+                  <td><span class="iso-badge" style="background:#ff3b30">K</span></td>
+                  <td><strong>Cho'yan</strong> (Kulrang, sferoid)</td>
+                  <td>120 – 220</td>
+                </tr>
+                <tr>
+                  <td><span class="iso-badge" style="background:#34c759">N</span></td>
+                  <td><strong>Rangli metallar</strong> (Alyuminiy, jez)</td>
+                  <td>300 – 800</td>
+                </tr>
+                <tr>
+                  <td><span class="iso-badge" style="background:#af52de">S</span></td>
+                  <td><strong>Issiqbardosh qotishmalar</strong> (Titan, inkonel)</td>
+                  <td>30 – 80</td>
+                </tr>
+                <tr>
+                  <td><span class="iso-badge" style="background:#57606a">H</span></td>
+                  <td><strong>Toblangan po'lat</strong> (Qattiq &gt; 45 HRC)</td>
+                  <td>50 – 150</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="apple-card bg-light border-0 p-3 h-100">
+          <h5 class="fw-bold fs-6 mb-3"><i class="fa-solid fa-ruler-combined text-success me-2"></i>H7 Tolerans Tekshiruvi</h5>
+          <div class="mb-3">
+            <label class="form-label">Teshik Diametri (mm), 30–315 Oralig'ida:</label>
+            <input type="number" class="form-control apple-input" id="h7In" value="80">
+          </div>
+          
+          <div class="metric-box bg-white">
+            <div class="metric-lbl">H7 Tolerans Qiymati</div>
+            <div class="metric-val text-primary" id="h7Out">—</div>
+          </div>
+
+          <div class="metric-box bg-white">
+            <div class="metric-lbl">Eng Katta / Eng Kichik Ruxsat</div>
+            <div class="metric-val" id="h7Lim">—</div>
+          </div>
+
+          <hr class="my-3">
+
+          <h6 class="small fw-bold text-dark mb-2">CCMT 09T304 Kodini O'qish (belgini bosing):</h6>
+          <div id="insertChips" class="d-flex flex-wrap mb-2">
+            <span class="iso-chip on" data-i="0">C</span>
+            <span class="iso-chip" data-i="1">C</span>
+            <span class="iso-chip" data-i="2">M</span>
+            <span class="iso-chip" data-i="3">T</span>
+            <span class="iso-chip" data-i="4">09</span>
+            <span class="iso-chip" data-i="5">T3</span>
+            <span class="iso-chip" data-i="6">04</span>
+          </div>
+          <div class="apple-alert warn mt-2" id="insertInfo">C — plastinka shakli: 80° li romb (rombsimon).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 8: MEHNAT MUHOFAZASI VA XAVFSIZLIK
+     ========================================== -->
+<div class="tab-pane fade" id="safety" role="tabpanel">
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="apple-card">
+        <span class="card-eyebrow">Ishga Tushirish Protokoli</span>
+        <h3 class="card-title">Stanokni Ishlatishdan Oldingi Tekshiruv Ro'yxati</h3>
+        <p class="card-subtitle">Har bir bandni ko'zdan kechirib, tasdiqlang.</p>
+
+        <div id="checkList"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="apple-card text-center mb-4">
+        <span class="card-eyebrow">Xavfsizlik Ko'rsatkichi</span>
+        <h5 class="card-title h6 mb-3">Ishga Tayyorlik Holati</h5>
+        
+        <div class="completion-ring" id="ring">
+          <span id="ringTxt">0%</span>
+        </div>
+
+        <div id="safeMsg" class="apple-alert bad mt-3">Barcha tekshiruv bandlarini belgilang.</div>
+      </div>
+
+      <div class="apple-card">
+        <h5 class="fw-bold fs-6 mb-3"><i class="fa-solid fa-vest text-warning me-2"></i>Shaxsiy Himoya Vositalari (SHV)</h5>
+        <div class="row g-2 text-center">
+          <div class="col-4">
+            <div class="p-3 bg-light rounded-3">
+              <i class="fa-solid fa-hard-hat text-warning fs-3 mb-1"></i>
+              <div class="small fw-bold">Kaska</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 bg-light rounded-3">
+              <i class="fa-solid fa-glasses text-primary fs-3 mb-1"></i>
+              <div class="small fw-bold">Ko'zoynak</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 bg-light rounded-3">
+              <i class="fa-solid fa-socks text-secondary fs-3 mb-1"></i>
+              <div class="small fw-bold">Maxsus Poyabzal</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="apple-alert bad mt-3">
+          <i class="fa-solid fa-triangle-exclamation me-1"></i>
+          <strong>Qat'iy taqiq:</strong> Aylanayotgan stanokda qo'lqop kiyish, osilib turuvchi kiyimlar va zargarlik buyumlari taqish qat'iyan man etiladi!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     TAB 9: BILIMLARNI SINASH TESTI
+     ========================================== -->
+<div class="tab-pane fade" id="quiz" role="tabpanel">
+  <div class="apple-card" style="max-width: 820px; margin: 0 auto;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div>
+        <span class="card-eyebrow">Kasbiy Mahorat Testi</span>
+        <h3 class="card-title mb-0">Stanokchi va Texnologlar Bilimini Sinash</h3>
+      </div>
+      <span class="status-pill" id="quizCount">1 / 8</span>
+    </div>
+
+    <div class="apple-progress mb-4">
+      <div class="apple-progress-bar" id="quizBar" style="width:0%"></div>
+    </div>
+
+    <div id="quizBox"></div>
+  </div>
+</div>
+
+</div>
+</main>
+
+<!-- ==========================================================================
+     FOOTER & TOAST & BACK-TO-TOP
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="fw-bold text-dark mb-1">PRECISION CNC · STANOKLAR VA TEXNOLOGIYALAR</div>
+    <div class="text-secondary small">
+      K 80 Rastochka, Hankook 90/120 va Frezerlik simulyatori. Interaktiv o'quv-muhandislik portali.
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" title="Yuqoriga qaytish">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div id="appleToast">Xabarnoma</div>
+
+<!-- ==========================================================================
+     JAVASCRIPT LOGIC & SIMULATOR ENGINE
+     ========================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+let activeTab = 'home';
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const rnd = (a, b) => a + Math.random() * (b - a);
+
+/* Helpers */
+function toast(msg) {
+  const t = $('appleToast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toast.h);
+  toast.h = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+function goTab(id) {
+  const targetTrigger = document.querySelector(`[data-bs-target="#${id}"]`);
+  if (targetTrigger) {
+    bootstrap.Tab.getOrCreateInstance(targetTrigger).show();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function fmtTime(min) {
+  let s = Math.round(min * 60);
+  const m = Math.floor(s / 60);
+  s = s % 60;
+  return m + ' daq ' + String(s).padStart(2, '0') + ' son';
+}
+
+/* Gear SVG Generation */
+function gearPath(R, r, n, hole) {
+  let d = '';
+  const step = 2 * Math.PI / n;
+  for (let i = 0; i < n; i++) {
+    const a = i * step;
+    [[r, a], [R, a + step * 0.18], [R, a + step * 0.42], [r, a + step * 0.6]].forEach((p, j) => {
+      d += (i === 0 && j === 0 ? 'M' : 'L') + (p[0] * Math.cos(p[1])).toFixed(1) + ' ' + (p[0] * Math.sin(p[1])).toFixed(1) + ' ';
+    });
+  }
+  d += 'Z';
+  if (hole) d += ` M ${hole} 0 A ${hole} ${hole} 0 1 0 ${-hole} 0 A ${hole} ${hole} 0 1 0 ${hole} 0 Z`;
+  return d;
+}
+
+function gearSVG(R, r, n, hole, fill, stroke, dur, from, to) {
+  return `<path d="${gearPath(R, r, n, hole)}" fill="${fill}" stroke="${stroke}" stroke-width="1.5" fill-rule="evenodd"><animateTransform attributeName="transform" type="rotate" from="${from}" to="${to}" dur="${dur}s" repeatCount="indefinite"/></path>`;
+}
+
+function initGears() {
+  const hero = $('heroGears');
+  if (hero) {
+    hero.innerHTML = `
+      <g transform="translate(135,140)">${gearSVG(92, 78, 16, 26, '#0071e3', '#005bb5', 18, 0, 360)}</g>
+      <g transform="translate(255,140)">${gearSVG(56, 46, 10, 16, '#1d1d1f', '#000000', 11, 18, -342)}</g>
+      <g transform="translate(325,65)">${gearSVG(34, 28, 8, 10, '#34c759', '#248a3d', 7, 0, 360)}</g>
+      <circle cx="135" cy="140" r="8" fill="#ffffff"/>
+      <circle cx="255" cy="140" r="5" fill="#ffffff"/>
+    `;
+  }
+}
+
+function animateCounters() {
+  document.querySelectorAll('.count').forEach(el => {
+    const to = +el.dataset.to, dec = +el.dataset.dec || 0, t0 = performance.now(), dur = 1400;
+    (function step(t) {
+      const p = clamp((t - t0) / dur, 0, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = (to * e).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  });
+}
+
+function confetti() {
+  const cols = ['#0071e3', '#34c759', '#ff9500', '#ff2d55', '#5856d6', '#5ac8fa'];
+  for (let i = 0; i < 60; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.background = cols[i % cols.length];
+    c.style.animationDuration = (2 + Math.random() * 2.5) + 's';
+    c.style.animationDelay = Math.random() * 0.5 + 's';
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 5000);
+  }
+}
+
+/* Studio Canvas Background & Particle System */
+const hatchCv = document.createElement('canvas');
+hatchCv.width = hatchCv.height = 10;
+(function() {
+  const h = hatchCv.getContext('2d');
+  h.strokeStyle = 'rgba(255,255,255,0.08)';
+  h.lineWidth = 1.2;
+  h.beginPath();
+  h.moveTo(0, 10);
+  h.lineTo(10, 0);
+  h.stroke();
+})();
+
+function studioGrid(g, W, H) {
+  g.fillStyle = '#090d16';
+  g.fillRect(0, 0, W, H);
+  g.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+  g.lineWidth = 1;
+  for (let x = 0; x < W; x += 40) {
+    g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke();
+  }
+  for (let y = 0; y < H; y += 40) {
+    g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke();
+  }
+}
+
+function spawnChip(arr, x, y, vx, vy, col) {
+  arr.push({ x, y, vx, vy, s: rnd(2, 4.5), life: rnd(25, 50), col: col || '#ffb703', rot: rnd(0, 6) });
+}
+
+function drawChips(g, arr, grav, limit) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    const c = arr[i];
+    g.save();
+    g.translate(c.x, c.y);
+    g.rotate(c.rot += 0.2);
+    g.fillStyle = c.col;
+    g.globalAlpha = clamp(c.life / 25, 0, 1);
+    g.fillRect(-c.s / 2, -c.s / 4, c.s * 1.5, c.s / 2);
+    g.restore();
+    c.x += c.vx;
+    c.y += c.vy;
+    c.vy += grav;
+    c.life--;
+    if (c.life <= 0 || (limit && limit(c))) arr.splice(i, 1);
+  }
+}
+
+/* ==========================================================================
+   1. K 80 BORING SIMULATION ENGINE
+   ========================================================================== */
+const cvB = $('boringCanvas'), gB = cvB ? cvB.getContext('2d') : null;
+const BW = { x: 260, w: 440, face: 700, len: 400, cy: 200, pilot: 58, rough: 64, fin: 70 };
+const B = { running: false, phase: -1, rough: 0, finish: 0, tool: 0, rpm: 0, stripe: 0, chips: [], drops: [], soj: true, t: 0, done: false };
+const N_RPM = 640, HOLE_MM = 120;
+const roughMin = HOLE_MM / (N_RPM * 0.20), finMin = HOLE_MM / (N_RPM * 0.08);
+
+function setBoringBtn() {
+  const b = $('btnStartBoring');
+  if (!b) return;
+  if (B.running) {
+    b.className = 'btn-apple-primary btn-apple-danger w-100';
+    b.innerHTML = '<i class="fa-solid fa-pause"></i> Pauza';
+  } else {
+    b.className = 'btn-apple-primary btn-apple-blue w-100';
+    b.innerHTML = '<i class="fa-solid fa-play"></i> ' + (B.phase >= 0 && B.phase < 3 ? 'Davom etish' : 'Boshlash');
+  }
+}
+
+function toggleBoring() {
+  if (B.phase === 3) resetBoring();
+  B.running = !B.running;
+  if (B.running && B.phase < 0) B.phase = 0;
+  setBoringBtn();
+}
+
+function resetBoring() {
+  Object.assign(B, { running: false, phase: -1, rough: 0, finish: 0, tool: 0, chips: [], drops: [], done: false });
+  setBoringBtn();
+}
+
+function drawBoring() {
+  if (!gB) return;
+  const g = gB, W = 800, H = 400, cy = BW.cy;
+  const sp = +($('boringSpeed')?.value || 2), step = sp * 0.7;
+
+  if (B.running) {
+    if (B.phase === 0) {
+      B.rough += step;
+      B.tool = B.rough;
+      if (B.rough >= BW.len) { B.rough = BW.len; B.phase = 1; }
+    } else if (B.phase === 1) {
+      B.tool -= step * 3;
+      if (B.tool <= 0) { B.tool = 0; B.phase = 2; }
+    } else if (B.phase === 2) {
+      B.finish += step * 0.8;
+      B.tool = B.finish;
+      if (B.finish >= BW.len) {
+        B.finish = BW.len;
+        B.phase = 3;
+        B.running = false;
+        B.done = true;
+        setBoringBtn();
+        toast('K 80 rastochka muvaffaqiyatli yakunlandi! Ø80.00 H7 ✔');
+      }
+    }
+  }
+
+  if (B.phase === 3 && B.tool > 0) B.tool = Math.max(0, B.tool - 5);
+  const cutting = B.running && (B.phase === 0 || B.phase === 2);
+  B.rpm += ((B.running ? N_RPM : 0) - B.rpm) * 0.05;
+  B.stripe += B.rpm * 0.02;
+  const r = B.phase >= 2 ? BW.fin : BW.rough;
+  const tipx = BW.face - B.tool, ty = cy - r;
+
+  studioGrid(g, W, H);
+
+  /* Chuck */
+  g.fillStyle = '#1e2430';
+  g.fillRect(200, 44, 60, 312);
+  g.strokeStyle = '#3a4454';
+  g.lineWidth = 1.5;
+  for (let y = -20; y < 340; y += 18) {
+    const yy = 44 + ((y + B.stripe) % 312 + 312) % 312;
+    g.beginPath(); g.moveTo(204, yy); g.lineTo(256, yy); g.stroke();
+  }
+  g.fillStyle = '#8e8e93';
+  g.font = '600 10px -apple-system, Inter';
+  g.save(); g.translate(190, 200); g.rotate(-Math.PI / 2); g.textAlign = 'center';
+  g.fillText('PATRON', 0, 0); g.restore();
+
+  /* Workpiece walls */
+  g.fillStyle = '#2c3545';
+  g.fillRect(BW.x, 50, BW.w, cy - BW.pilot - 50);
+  g.fillRect(BW.x, cy + BW.pilot, BW.w, 350 - cy - BW.pilot);
+
+  /* Cut regions */
+  g.fillStyle = '#06080e';
+  g.fillRect(BW.face - BW.len, cy - BW.pilot, BW.len, BW.pilot * 2);
+  g.fillRect(BW.face - B.rough, cy - BW.rough, B.rough, BW.rough * 2);
+  g.fillStyle = '#0b1424';
+  g.fillRect(BW.face - B.finish, cy - BW.fin, B.finish, BW.fin * 2);
+
+  /* Metal hatch */
+  g.save();
+  g.beginPath();
+  g.rect(BW.x, 50, BW.w, 300);
+  g.clip();
+  const pat = g.createPattern(hatchCv, 'repeat');
+  g.fillStyle = pat;
+  g.fillRect(BW.x, 50, BW.w, cy - BW.rough - 50);
+  g.fillRect(BW.x, cy + BW.rough, BW.w, 350 - cy - BW.rough);
+  g.restore();
+
+  /* Bore edges */
+  const drawBoreLine = (len, rad, col, w, glow) => {
+    g.save();
+    g.strokeStyle = col;
+    g.lineWidth = w;
+    if (glow) { g.shadowColor = col; g.shadowBlur = glow; }
+    g.beginPath();
+    g.moveTo(BW.face - len, cy - rad); g.lineTo(BW.face, cy - rad);
+    g.moveTo(BW.face - len, cy + rad); g.lineTo(BW.face, cy + rad);
+    g.stroke();
+    g.restore();
+  };
+  drawBoreLine(BW.len, BW.pilot, '#636366', 1.5);
+  if (B.rough > 0) drawBoreLine(B.rough, BW.rough, '#ff9500', 2);
+  if (B.finish > 0) drawBoreLine(B.finish, BW.fin, '#0071e3', 2.5, 10);
+
+  g.strokeStyle = '#48484a';
+  g.lineWidth = 2;
+  g.strokeRect(BW.x, 50, BW.w, 300);
+
+  /* Center Axis */
+  g.strokeStyle = 'rgba(255, 59, 48, 0.4)';
+  g.setLineDash([8, 6]);
+  g.lineWidth = 1;
+  g.beginPath(); g.moveTo(180, cy); g.lineTo(790, cy); g.stroke();
+  g.setLineDash([]);
+
+  /* Coolant Jet (SOJ) */
+  B.t++;
+  if (B.soj && B.running) {
+    g.strokeStyle = 'rgba(0, 113, 227, 0.75)';
+    g.lineWidth = 3;
+    g.setLineDash([8, 6]);
+    g.lineDashOffset = -B.t * 3;
+    for (let k = 0; k < 3; k++) {
+      g.beginPath();
+      g.moveTo(775, 26 + k * 5);
+      g.quadraticCurveTo(740, 60 + k * 4, BW.face + 4, cy - 24 + k * 8);
+      g.stroke();
+    }
+    g.setLineDash([]);
+    if (B.t % 2 === 0) B.drops.push({ x: BW.face - 4, y: cy - 20 + rnd(-8, 8), vx: rnd(-1.6, -0.6), vy: rnd(-0.2, 0.5), life: 30 });
+  }
+
+  g.fillStyle = 'rgba(90, 200, 250, 0.85)';
+  for (let i = B.drops.length - 1; i >= 0; i--) {
+    const d = B.drops[i];
+    g.beginPath(); g.arc(d.x, d.y, 2, 0, 6.28); g.fill();
+    d.x += d.vx; d.y += d.vy; d.life--;
+    if (d.x < tipx - 4) d.vx = Math.abs(d.vx);
+    if (d.life <= 0) B.drops.splice(i, 1);
+  }
+
+  /* Boring Bar Tool */
+  const toolGrad = g.createLinearGradient(0, ty + 8, 0, ty + 36);
+  toolGrad.addColorStop(0, '#8e8e93');
+  toolGrad.addColorStop(1, '#48484a');
+  g.fillStyle = toolGrad;
+  g.fillRect(tipx + 8, ty + 8, 520, 28);
+  g.strokeStyle = '#1d1d1f';
+  g.lineWidth = 1.5;
+  g.strokeRect(tipx + 8, ty + 8, 520, 28);
+
+  g.fillStyle = '#636366';
+  g.fillRect(tipx + 528, ty - 20, 60, 84);
+  g.strokeRect(tipx + 528, ty - 20, 60, 84);
+
+  /* Gold Carbide Insert (CCMT) */
+  g.fillStyle = '#ff9500';
+  g.beginPath();
+  g.moveTo(tipx + 26, ty + 6);
+  g.lineTo(tipx, ty);
+  g.lineTo(tipx - 5, ty + 13);
+  g.lineTo(tipx + 22, ty + 18);
+  g.closePath();
+  g.fill();
+  g.strokeStyle = '#000';
+  g.stroke();
+
+  /* Cutting Spark & Glow */
+  if (cutting) {
+    const sparkGrad = g.createRadialGradient(tipx, ty, 0, tipx, ty, 18);
+    sparkGrad.addColorStop(0, 'rgba(255, 214, 10, 0.95)');
+    sparkGrad.addColorStop(1, 'rgba(255, 149, 0, 0)');
+    g.fillStyle = sparkGrad;
+    g.fillRect(tipx - 24, ty - 24, 48, 48);
+    for (let i = 0; i < 2; i++) {
+      spawnChip(B.chips, tipx, ty + 2, rnd(0.8, 3.2), rnd(-1.5, 1), Math.random() < 0.5 ? '#ff9500' : '#ffd60a');
+    }
+  }
+  drawChips(g, B.chips, 0.22, c => c.y > cy + r - 4 || c.x > 830);
+
+  /* Dimension Annotations */
+  g.strokeStyle = '#0071e3';
+  g.fillStyle = '#0071e3';
+  g.lineWidth = 1.5;
+  g.font = '600 11px -apple-system, Inter';
+  g.textAlign = 'center';
+  g.beginPath(); g.moveTo(BW.face - BW.len, 34); g.lineTo(BW.face, 34); g.stroke();
+  g.fillText('L = 120 mm', BW.face - BW.len / 2, 28);
+
+  g.textAlign = 'left';
+  g.fillStyle = B.done ? '#34c759' : '#e5e5ea';
+  g.fillText(B.done ? 'Ø80.00 H7 ✔' : 'Ø' + (B.phase >= 2 ? '78 → 80' : '76 → 78'), BW.face - BW.len + 8, cy + 4);
+
+  /* Status Overlay in Canvas */
+  const phLabels = ['XOMAKI YO\'NISH · f=0.20 mm/ob', 'ASBOBNI QAYTARISH', 'TOZA YO\'NISH · f=0.08 mm/ob', 'TAYYOR · Ø80.00 H7'];
+  g.fillStyle = '#ffffff';
+  g.font = '600 12px -apple-system, Inter';
+  g.textAlign = 'left';
+  g.fillText(B.phase < 0 ? 'KUTISH REJIMI — BOSHLASH TUGMASINI BOSING' : phLabels[B.phase], 16, 24);
+
+  /* Update Live UI Elements */
+  const mm = (B.tool / BW.len) * HOLE_MM;
+  if ($('liveDepth')) $('liveDepth').textContent = mm.toFixed(1) + ' / 120 mm';
+  if ($('liveRPM')) $('liveRPM').textContent = Math.round(B.rpm) + ' RPM';
+  if ($('liveDia')) $('liveDia').textContent = (B.phase >= 2 ? (78 + 2 * B.finish / BW.len).toFixed(2) : B.phase >= 0 ? (76 + 2 * B.rough / BW.len).toFixed(2) : '76.00');
+
+  const phaseNames = ['Xomaki yo\'nish', 'Orqaga chiqish', 'Toza yo\'nish', 'Tayyor ✔'];
+  if ($('livePhase')) $('livePhase').textContent = B.phase < 0 ? 'Kutilmoqda' : phaseNames[B.phase];
+  if ($('liveTime')) $('liveTime').textContent = B.phase === 3 ? fmtTime(roughMin + finMin) : '≈ ' + fmtTime(roughMin + finMin);
+  if ($('liveRa')) $('liveRa').textContent = B.phase === 3 ? 'Ra 1.6 ✔' : B.phase === 2 ? 'Ra ≈ 1.6 (jarayonda)' : 'Ra 6.3 (xomaki)';
+
+  const prog = B.phase < 0 ? 0 : B.phase === 0 ? (B.rough / BW.len * 0.45) : B.phase === 1 ? 0.45 : B.phase === 2 ? (0.45 + B.finish / BW.len * 0.55) : 1;
+  if ($('boringProg')) $('boringProg').style.width = (prog * 100) + '%';
+
+  document.querySelectorAll('#boringSteps .step-pill').forEach(s => {
+    const i = +s.dataset.s, cur = B.phase < 0 ? 0 : B.phase <= 1 ? 1 : B.phase === 2 ? 2 : 3;
+    s.classList.toggle('active', i === cur && B.phase !== 3);
+    s.classList.toggle('done', i < cur || B.phase === 3);
+  });
+}
+
+/* ==========================================================================
+   2. HANKOOK 90/120 HEAVY LATHE ENGINE
+   ========================================================================== */
+const cvH = $('hankookCanvas'), gH = cvH ? cvH.getContext('2d') : null;
+const H = { run: false, ang: 0, w: 0, chips: [], sparks: [] };
+
+function drawHankook() {
+  if (!gH) return;
+  const g = gH, W = 800, Ht = 420, cx = 300, cy = 210;
+  const dia = +($('hankookDiameter')?.value || 1200), R = dia === 1200 ? 175 : 131;
+  const rpmTarget = +($('hankookSpeed')?.value || 30) * 1.2;
+  if ($('hkSpeedLbl')) $('hkSpeedLbl').textContent = Math.round(rpmTarget);
+
+  H.w += ((H.run ? rpmTarget : 0) - H.w) * 0.04;
+  H.ang += H.w * 0.0012;
+
+  studioGrid(g, W, Ht);
+
+  /* Rotary Chuck Table */
+  g.save();
+  g.translate(cx, cy);
+  g.rotate(H.ang);
+
+  const tableGrad = g.createRadialGradient(0, 0, 10, 0, 0, 200);
+  tableGrad.addColorStop(0, '#3a4454');
+  tableGrad.addColorStop(1, '#1e2430');
+  g.fillStyle = tableGrad;
+  g.beginPath(); g.arc(0, 0, 202, 0, 6.28); g.fill();
+  g.strokeStyle = '#4f5d73'; g.lineWidth = 2.5; g.stroke();
+
+  g.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+  g.lineWidth = 1.5;
+  [60, 110, 160].forEach(rad => {
+    g.beginPath(); g.arc(0, 0, rad, 0, 6.28); g.stroke();
+  });
+
+  g.strokeStyle = 'rgba(0, 0, 0, 0.4)';
+  g.lineWidth = 8;
+  for (let i = 0; i < 8; i++) {
+    g.rotate(Math.PI / 4);
+    g.beginPath(); g.moveTo(40, 0); g.lineTo(198, 0); g.stroke();
+  }
+
+  /* Chuck Jaws */
+  for (let i = 0; i < 4; i++) {
+    g.save();
+    g.rotate(i * Math.PI / 2 + Math.PI / 4);
+    g.fillStyle = '#636366';
+    g.fillRect(R - 2, -20, 28, 40);
+    g.strokeStyle = '#1d1d1f';
+    g.lineWidth = 1.5;
+    g.strokeRect(R - 2, -20, 28, 40);
+    g.fillStyle = '#0071e3';
+    g.fillRect(R + 8, -4, 10, 8);
+    g.restore();
+  }
+
+  /* Workpiece */
+  const workGrad = g.createRadialGradient(-R * 0.3, -R * 0.3, R * 0.1, 0, 0, R);
+  workGrad.addColorStop(0, '#c7c7cc');
+  workGrad.addColorStop(1, '#636366');
+  g.fillStyle = workGrad;
+  g.beginPath(); g.arc(0, 0, R, 0, 6.28); g.fill();
+  g.strokeStyle = '#0071e3'; g.lineWidth = 2.5; g.stroke();
+
+  g.fillStyle = '#1e2430';
+  g.beginPath(); g.arc(0, 0, R * 0.28, 0, 6.28); g.fill();
+
+  for (let i = 0; i < 8; i++) {
+    const a = i * Math.PI / 4;
+    g.beginPath();
+    g.arc(Math.cos(a) * R * 0.66, Math.sin(a) * R * 0.66, R * 0.045, 0, 6.28);
+    g.fill();
+  }
+  g.restore();
+
+  /* Tool Post */
+  const tx = cx + R;
+  g.fillStyle = '#2c3545';
+  g.fillRect(tx + 60, cy - 52, 140, 104);
+  g.strokeStyle = '#4f5d73'; g.lineWidth = 1.5;
+  g.strokeRect(tx + 60, cy - 52, 140, 104);
+
+  g.fillStyle = '#636366';
+  g.fillRect(tx + 6, cy - 12, 56, 24);
+  g.strokeStyle = '#1d1d1f';
+  g.strokeRect(tx + 6, cy - 12, 56, 24);
+
+  g.fillStyle = '#ff9500';
+  g.beginPath();
+  g.moveTo(tx + 8, cy - 12); g.lineTo(tx - 3, cy); g.lineTo(tx + 8, cy + 12);
+  g.closePath(); g.fill();
+
+  g.fillStyle = '#8e8e93';
+  g.font = '600 11px -apple-system, Inter';
+  g.textAlign = 'center';
+  g.fillText('SUPORT', tx + 130, cy + 4);
+
+  /* Sparks & Chips */
+  if (H.run && H.w > 6) {
+    const n = Math.ceil(H.w / 30);
+    for (let i = 0; i < n; i++) {
+      H.sparks.push({ x: tx - 2, y: cy + rnd(-4, 4), vx: rnd(0.5, 2.6), vy: rnd(1, 3 + H.w / 30), life: rnd(10, 24) });
+    }
+    if (Math.random() < 0.5) spawnChip(H.chips, tx, cy, rnd(0.8, 2.8), rnd(0.5, 2.5), '#e5e5ea');
+    const gr = g.createRadialGradient(tx, cy, 0, tx, cy, 20);
+    gr.addColorStop(0, 'rgba(255, 214, 10, 0.9)');
+    gr.addColorStop(1, 'rgba(255, 149, 0, 0)');
+    g.fillStyle = gr;
+    g.fillRect(tx - 22, cy - 22, 44, 44);
+  }
+
+  g.lineWidth = 1.5;
+  for (let i = H.sparks.length - 1; i >= 0; i--) {
+    const s = H.sparks[i];
+    g.strokeStyle = `rgba(255, ${180 + Math.random() * 50 | 0}, 60, ${clamp(s.life / 14, 0, 1)})`;
+    g.beginPath(); g.moveTo(s.x, s.y); g.lineTo(s.x - s.vx * 2, s.y - s.vy * 2); g.stroke();
+    s.x += s.vx; s.y += s.vy; s.vy += 0.15; s.life--;
+    if (s.life <= 0) H.sparks.splice(i, 1);
+  }
+  drawChips(g, H.chips, 0.2, c => c.y > Ht + 10);
+
+  /* Clean Tachometer Dial */
+  const gx = 690, gy = 95, gr2 = 60;
+  g.fillStyle = 'rgba(15, 20, 30, 0.9)';
+  g.beginPath(); g.arc(gx, gy, gr2 + 10, 0, 6.28); g.fill();
+  g.strokeStyle = '#2c3545'; g.lineWidth = 1.5; g.stroke();
+
+  g.lineWidth = 5; g.lineCap = 'round';
+  g.strokeStyle = '#1e2430';
+  g.beginPath(); g.arc(gx, gy, gr2 - 6, 0.75 * Math.PI, 2.25 * Math.PI); g.stroke();
+
+  g.strokeStyle = H.w > 90 ? '#ff3b30' : '#34c759';
+  g.beginPath();
+  g.arc(gx, gy, gr2 - 6, 0.75 * Math.PI, 0.75 * Math.PI + clamp(H.w / 120, 0, 1) * 1.5 * Math.PI);
+  g.stroke();
+  g.lineCap = 'butt';
+
+  g.fillStyle = '#ffffff';
+  g.textAlign = 'center';
+  g.font = '700 16px -apple-system, Inter';
+  g.fillText(Math.round(H.w), gx, gy + 32);
+  g.font = '500 10px -apple-system, Inter';
+  g.fillStyle = '#8e8e93';
+  g.fillText('ayl/min', gx, gy + 45);
+
+  /* Telemetry calculation */
+  const Vc = Math.PI * dia * H.w / 1000;
+  if ($('hkRPM')) $('hkRPM').textContent = H.w.toFixed(1) + ' ayl/min';
+  if ($('hkVc')) $('hkVc').textContent = Vc.toFixed(0) + ' m/min';
+
+  const w = $('hkWarn');
+  if (w) {
+    if (Vc > 300) {
+      w.className = 'apple-alert bad mb-3';
+      w.innerHTML = '<i class="fa-solid fa-triangle-exclamation me-1"></i> Vc juda yuqori! Po\'lat uchun tezlikni kamaytiring.';
+    } else if (Vc > 200) {
+      w.className = 'apple-alert warn mb-3';
+      w.innerHTML = '<i class="fa-solid fa-circle-exclamation me-1"></i> Vc yuqori: faqat rangli metallar uchun mos.';
+    } else {
+      w.className = 'apple-alert ok mb-3';
+      w.innerHTML = '<i class="fa-solid fa-circle-check me-1"></i> Rejim optimal (po\'lat uchun to\'g\'ri parametr).';
+    }
+  }
+}
+
+/* ==========================================================================
+   3. MILLING SIMULATION ENGINE
+   ========================================================================== */
+const cvM = $('millingCanvas'), gM = cvM ? cvM.getContext('2d') : null;
+const M = { run: false, p: 0, ang: 0, w: 0, chips: [], drops: [], hold: 0, t: 0 };
+const WP = { x: 90, w: 620, top: 228, bot: 340 }, AP = 7, CR = 62, CB = 228 + AP;
+
+function drawMilling() {
+  if (!gM) return;
+  const g = gM, W = 800, H2 = 400;
+  const n = +($('millRPM')?.value || 600), vf = +($('millFeed')?.value || 240);
+  if ($('mnLbl')) $('mnLbl').textContent = n;
+  if ($('vfLbl')) $('vfLbl').textContent = vf;
+
+  M.w += ((M.run ? n : 0) - M.w) * 0.05;
+  M.ang += M.w * 0.0045;
+  M.t++;
+
+  if (M.run) {
+    if (M.hold > 0) {
+      M.hold--;
+      if (M.hold === 0) M.p = 0;
+    } else {
+      M.p += vf / 180;
+      if (M.p > WP.w + CR * 2 + 30) M.hold = 60;
+    }
+  }
+
+  const cx = WP.x - CR - 10 + M.p;
+  studioGrid(g, W, H2);
+
+  /* Table & Vise */
+  g.fillStyle = '#2c3545';
+  g.fillRect(40, WP.bot, 720, 40);
+  g.fillStyle = '#1e2430';
+  g.fillRect(40, WP.bot + 40, 720, 16);
+  g.fillStyle = '#4f5d73';
+  g.fillRect(WP.x - 22, WP.top + 10, 22, WP.bot - WP.top - 10);
+  g.fillRect(WP.x + WP.w, WP.top + 10, 22, WP.bot - WP.top - 10);
+
+  /* Workpiece */
+  const split = clamp(cx, WP.x, WP.x + WP.w);
+  g.fillStyle = '#636366';
+  g.fillRect(WP.x, WP.top + AP, split - WP.x, WP.bot - WP.top - AP);
+  g.fillStyle = '#8e8e93';
+  g.fillRect(split, WP.top, WP.x + WP.w - split, WP.bot - WP.top);
+
+  g.save();
+  g.beginPath();
+  g.rect(WP.x, WP.top, WP.w, WP.bot - WP.top);
+  g.clip();
+  g.fillStyle = g.createPattern(hatchCv, 'repeat');
+  g.fillRect(WP.x, WP.top, WP.w, WP.bot - WP.top);
+  g.restore();
+
+  if (split > WP.x) {
+    const edgeGrad = g.createLinearGradient(WP.x, 0, split, 0);
+    edgeGrad.addColorStop(0, 'rgba(0, 113, 227, 0.2)');
+    edgeGrad.addColorStop(1, 'rgba(0, 113, 227, 0.9)');
+    g.fillStyle = edgeGrad;
+    g.fillRect(WP.x, WP.top + AP - 1, split - WP.x, 3);
+  }
+  g.strokeStyle = '#d2d2d7'; g.lineWidth = 1.5;
+  g.strokeRect(WP.x, WP.top, WP.w, WP.bot - WP.top);
+
+  /* Coolant Stream */
+  const fx = cx + CR * 0.9, fy = CB - 4;
+  if (M.run && $('millSoj')?.checked) {
+    g.strokeStyle = 'rgba(0, 113, 227, 0.75)';
+    g.lineWidth = 3;
+    g.setLineDash([8, 6]);
+    g.lineDashOffset = -M.t * 3;
+    for (let k = 0; k < 3; k++) {
+      g.beginPath();
+      g.moveTo(cx + CR + 42, 60 + k * 6);
+      g.quadraticCurveTo(cx + CR + 40, 140, fx + k * 4, fy);
+      g.stroke();
+    }
+    g.setLineDash([]);
+    g.fillStyle = '#636366';
+    g.fillRect(cx + CR + 30, 40, 24, 30);
+    if (M.t % 2 === 0) M.drops.push({ x: fx, y: fy, vx: rnd(1, 3), vy: rnd(-3, -0.5), life: 22 });
+  }
+
+  g.fillStyle = 'rgba(90, 200, 250, 0.85)';
+  for (let i = M.drops.length - 1; i >= 0; i--) {
+    const d = M.drops[i];
+    g.beginPath(); g.arc(d.x, d.y, 2, 0, 6.28); g.fill();
+    d.x += d.vx; d.y += d.vy; d.vy += 0.2; d.life--;
+    if (d.life <= 0) M.drops.splice(i, 1);
+  }
+
+  /* Spindle Arbor */
+  const arborGrad = g.createLinearGradient(cx - 18, 0, cx + 18, 0);
+  arborGrad.addColorStop(0, '#636366');
+  arborGrad.addColorStop(0.5, '#c7c7cc');
+  arborGrad.addColorStop(1, '#636366');
+  g.fillStyle = arborGrad;
+  g.fillRect(cx - 18, 0, 36, CB - 46);
+
+  /* Cutter Body */
+  const bodyGrad = g.createLinearGradient(0, CB - 46, 0, CB);
+  bodyGrad.addColorStop(0, '#3a4454');
+  bodyGrad.addColorStop(1, '#1e2430');
+  g.fillStyle = bodyGrad;
+  g.beginPath();
+  g.moveTo(cx - 26, CB - 46); g.lineTo(cx + 26, CB - 46);
+  g.lineTo(cx + CR, CB - 10); g.lineTo(cx + CR, CB);
+  g.lineTo(cx - CR, CB); g.lineTo(cx - CR, CB - 10);
+  g.closePath(); g.fill();
+  g.strokeStyle = '#4f5d73'; g.lineWidth = 1.5; g.stroke();
+
+  /* Inserts */
+  for (let i = 0; i < 6; i++) {
+    const a = M.ang + i * Math.PI / 3;
+    const px = cx + Math.cos(a) * CR * 0.9;
+    const front = Math.sin(a) > 0;
+    g.fillStyle = front ? '#ff9500' : '#8e6b12';
+    g.fillRect(px - 8, CB - 11, 16, 11);
+    g.strokeStyle = '#1d1d1f'; g.lineWidth = 1;
+    g.strokeRect(px - 8, CB - 11, 16, 11);
+  }
+
+  /* Sparks */
+  if (M.run && M.w > 40 && M.hold === 0) {
+    const gr = g.createRadialGradient(fx, fy, 0, fx, fy, 20);
+    gr.addColorStop(0, 'rgba(255, 214, 10, 0.85)');
+    gr.addColorStop(1, 'rgba(255, 149, 0, 0)');
+    g.fillStyle = gr;
+    g.fillRect(fx - 22, fy - 22, 44, 44);
+    for (let i = 0; i < Math.ceil(M.w / 260); i++) {
+      spawnChip(M.chips, fx, fy, rnd(1.2, 4), rnd(-4.2, -1), Math.random() < 0.5 ? '#ff9500' : '#ffd60a');
+    }
+  }
+  drawChips(g, M.chips, 0.25, c => c.y > WP.bot || c.x > 800);
+
+  /* Inset Top View Radar */
+  const ix = 84, iy = 84, ir = 48;
+  g.fillStyle = 'rgba(15, 20, 30, 0.9)';
+  g.beginPath(); g.arc(ix, iy, ir + 10, 0, 6.28); g.fill();
+  g.strokeStyle = '#2c3545'; g.lineWidth = 1.5; g.stroke();
+
+  g.save();
+  g.translate(ix, iy);
+  g.rotate(M.ang);
+  g.fillStyle = '#2c3545';
+  g.beginPath(); g.arc(0, 0, ir - 6, 0, 6.28); g.fill();
+  g.strokeStyle = '#4f5d73'; g.stroke();
+
+  g.fillStyle = '#ff9500';
+  for (let i = 0; i < 6; i++) {
+    g.rotate(Math.PI / 3);
+    g.fillRect(ir - 18, -5, 14, 10);
+  }
+  g.fillStyle = '#ffffff';
+  g.beginPath(); g.arc(0, 0, 7, 0, 6.28); g.fill();
+  g.restore();
+
+  g.fillStyle = '#8e8e93';
+  g.font = '500 10px -apple-system, Inter';
+  g.textAlign = 'center';
+  g.fillText('YUQORIDAN', ix, iy + ir + 20);
+
+  /* Telemetry calculation */
+  const Vc = Math.PI * 100 * n / 1000, fz = vf / (6 * n);
+  if ($('mVc')) $('mVc').textContent = Vc.toFixed(0) + ' m/min';
+  if ($('mFz')) $('mFz').textContent = fz.toFixed(3) + ' mm/tish';
+
+  const a = $('mAdvice');
+  if (a) {
+    if (fz > 0.25) {
+      a.className = 'apple-alert bad';
+      a.innerHTML = '<i class="fa-solid fa-triangle-exclamation me-1"></i> fz juda katta — plastinka sinishi xavfi mavjud.';
+    } else if (fz < 0.05) {
+      a.className = 'apple-alert warn';
+      a.innerHTML = '<i class="fa-solid fa-circle-exclamation me-1"></i> fz juda kichik — plastinka ishqalanib tez eskiradi.';
+    } else {
+      a.className = 'apple-alert ok';
+      a.innerHTML = '<i class="fa-solid fa-circle-check me-1"></i> fz optimal oraliqda (0.05 – 0.25 mm/tish).';
+    }
+  }
+}
+
+/* ==========================================================================
+   4. CALCULATOR ENGINE
+   ========================================================================== */
+const MATS = {
+  steel: { vc: 160, f: 0.12, kc: 2000 },
+  stainless: { vc: 130, f: 0.10, kc: 2400 },
+  cast: { vc: 150, f: 0.15, kc: 1100 },
+  alu: { vc: 400, f: 0.15, kc: 700 },
+  ti: { vc: 50, f: 0.08, kc: 1400 }
+};
+
+function calcMachining() {
+  const op = $('cOp')?.value || 'bore';
+  const m = MATS[$('cMat')?.value || 'steel'];
+  const D = +($('cDiameter')?.value || 80);
+  const Vc = +($('cVc')?.value || 160);
+  const f = +($('cFeed')?.value || 0.12);
+  const L = +($('cLength')?.value || 120);
+  const ap = +($('cAp')?.value || 1);
+  const r = +($('cR')?.value || 0.4);
+  const z = +($('cZ')?.value || 6);
+
+  if ($('zWrap')) $('zWrap').style.display = op === 'mill' ? '' : 'none';
+  if ($('lF')) $('lF').textContent = op === 'mill' ? 'Tishga uzatish fz, mm/tish' : 'Uzatish f, mm/ob';
+  if ($('lD')) $('lD').textContent = op === 'mill' ? 'Freza Ø, mm' : op === 'bore' ? 'Teshik Ø, mm' : 'Detal Ø, mm';
+
+  const n = 1000 * Vc / (Math.PI * D);
+  const Vf = op === 'mill' ? (n * f * z) : (n * f);
+  const Tm = L / Vf;
+  const ae = 0.75 * D;
+  const Q = op === 'mill' ? (ap * ae * Vf / 1000) : (ap * f * Vc);
+  const Pc = Q * m.kc / 60000, Pm = Pc / 0.8;
+  const Ra = op === 'mill' ? null : ((f * f) / (32 * r) * 1000);
+
+  if ($('resRPMVal')) $('resRPMVal').textContent = Math.round(n) + ' RPM';
+  if ($('resVfVal')) $('resVfVal').textContent = Vf.toFixed(1) + ' mm/min';
+  if ($('resTime')) $('resTime').textContent = fmtTime(Tm);
+  if ($('resQ')) $('resQ').textContent = Q.toFixed(1) + ' sm³/min';
+  if ($('resP')) $('resP').textContent = Pc.toFixed(2) + ' / ' + Pm.toFixed(2) + ' kW';
+  if ($('resRa')) $('resRa').textContent = Ra === null ? '— (frezerda tish profili)' : 'Ra ≈ ' + Ra.toFixed(2) + ' µm';
+
+  const load = clamp(Pm / 45 * 100, 0, 100);
+  const pb = $('pBar');
+  if (pb) {
+    pb.style.width = load + '%';
+    pb.style.background = load > 85 ? '#ff3b30' : load > 60 ? '#ff9500' : '';
+  }
+
+  const msgs = [];
+  let lvl = 'ok';
+  if (Pm > 45) { msgs.push('Motor quvvati (45 kW) yetishmasligi mumkin — ap yoki f ni kamaytiring.'); lvl = 'bad'; }
+  if (n > 2500) { msgs.push('Oborot yuqori: shpindel balansi va xavfsizlikni tekshiring.'); if (lvl !== 'bad') lvl = 'warn'; }
+  if (op === 'bore' && L / D > 4) { msgs.push('L/D > 4 — tebranish xavfi, qattiq karbid go\'lak tanlang.'); if (lvl !== 'bad') lvl = 'warn'; }
+  if (Ra !== null && Ra > 1.6) { msgs.push('Ra 1.6 ga erishish uchun f ≤ ' + Math.sqrt(1.6 * 32 * r / 1000).toFixed(3) + ' mm/ob bo\'lishi kerak.'); if (lvl !== 'bad') lvl = 'warn'; }
+  if (!msgs.length) msgs.push('Parametrlar optimal. K 80 rastochka va toza o\'tish uchun mos.');
+
+  const a = $('calcAdvice');
+  if (a) {
+    a.className = 'apple-alert ' + lvl;
+    a.innerHTML = '<i class="fa-solid ' + (lvl === 'ok' ? 'fa-circle-check' : 'fa-triangle-exclamation') + ' me-1"></i> ' + msgs.join('<br>');
+  }
+
+  drawRpmChart(Vc, D, n);
+}
+
+function drawRpmChart(Vc, D, n) {
+  const c = $('rpmChart');
+  if (!c) return;
+  const g = c.getContext('2d'), W = c.width, H3 = c.height, pl = 54, pr = 20, pt = 16, pb2 = 32, maxD = 400;
+  g.clearRect(0, 0, W, H3);
+
+  const f = d => 1000 * Vc / (Math.PI * d), yMax = Math.max(f(20), 100);
+  const X = d => pl + (d - 20) / (maxD - 20) * (W - pl - pr), Y = v => pt + (1 - v / yMax) * (H3 - pt - pb2);
+
+  g.strokeStyle = '#e5e5ea';
+  g.fillStyle = '#86868b';
+  g.font = '500 10px -apple-system, Inter';
+  g.lineWidth = 1;
+
+  for (let i = 0; i <= 4; i++) {
+    const v = yMax * i / 4, y = Y(v);
+    g.beginPath(); g.moveTo(pl, y); g.lineTo(W - pr, y); g.stroke();
+    g.textAlign = 'right'; g.fillText(Math.round(v), pl - 6, y + 3);
+  }
+  for (let d = 50; d <= 400; d += 50) {
+    const x = X(d);
+    g.beginPath(); g.moveTo(x, pt); g.lineTo(x, H3 - pb2); g.stroke();
+    g.textAlign = 'center'; g.fillText(d, x, H3 - pb2 + 14);
+  }
+  g.fillText('Diametr D, mm', W / 2, H3 - 6);
+
+  /* Curve */
+  g.strokeStyle = '#0071e3';
+  g.lineWidth = 2.5;
+  g.beginPath();
+  for (let d = 20; d <= maxD; d += 2) {
+    const x = X(d), y = Y(f(d));
+    d === 20 ? g.moveTo(x, y) : g.lineTo(x, y);
+  }
+  g.stroke();
+
+  /* Point */
+  const px = X(clamp(D, 20, maxD)), py = Y(clamp(n, 0, yMax));
+  g.setLineDash([4, 4]);
+  g.strokeStyle = '#ff3b30';
+  g.lineWidth = 1.2;
+  g.beginPath();
+  g.moveTo(px, py); g.lineTo(px, H3 - pb2);
+  g.moveTo(px, py); g.lineTo(pl, py);
+  g.stroke();
+  g.setLineDash([]);
+
+  g.fillStyle = '#ff3b30';
+  g.beginPath(); g.arc(px, py, 6, 0, 6.28); g.fill();
+  g.strokeStyle = '#ffffff'; g.lineWidth = 2; g.stroke();
+  g.font = '600 11px -apple-system, Inter';
+  g.textAlign = px > W - 130 ? 'right' : 'left';
+  g.fillText('n = ' + Math.round(n) + ' (Ø' + D + ')', px + (px > W - 130 ? -10 : 10), py - 8);
+}
+
+/* ==========================================================================
+   5. G-CODE GENERATOR ENGINE
+   ========================================================================== */
+let gPath = [], gText = '', gT = 0;
+const GCFG = {
+  bore: { prog: 'O0080', l1: 'Yakuniy Ø, mm', l2: 'Dastlabki teshik Ø', l3: 'Chuqurlik, mm', l4: 'ap (radial), mm', dia: 80, stock: 76, depth: 120, rpm: 650, ap: 0.8 },
+  turn: { prog: 'O0090', l1: 'Yakuniy Ø, mm', l2: 'Xom detal Ø', l3: 'Uzunlik, mm', l4: 'ap (radial), mm', dia: 80, stock: 90, depth: 100, rpm: 600, ap: 1.5 },
+  mill: { prog: 'O0100', l1: 'Freza Ø, mm', l2: 'Ishlov eni (Y), mm', l3: 'Uzunlik (X), mm', l4: 'ap (chuqurlik), mm', dia: 100, stock: 200, depth: 300, rpm: 600, ap: 1 }
+};
+
+function gcfgApply() {
+  const c = GCFG[$('gOp')?.value || 'bore'];
+  if ($('gL1')) $('gL1').textContent = c.l1;
+  if ($('gL2')) $('gL2').textContent = c.l2;
+  if ($('gL3')) $('gL3').textContent = c.l3;
+  if ($('gL4')) $('gL4').textContent = c.l4;
+  if ($('gProgNo')) $('gProgNo').value = c.prog;
+  if ($('gDia')) $('gDia').value = c.dia;
+  if ($('gStock')) $('gStock').value = c.stock;
+  if ($('gDepth')) $('gDepth').value = c.depth;
+  if ($('gRPM')) $('gRPM').value = c.rpm;
+  if ($('gAp')) $('gAp').value = c.ap;
+  if ($('gFR')) $('gFR').value = $('gOp')?.value === 'mill' ? '240' : '0.20';
+  if ($('gFF')) $('gFF').value = $('gOp')?.value === 'mill' ? '160' : '0.08';
+  generateGCode();
+}
+
+function generateGCode() {
+  const op = $('gOp')?.value || 'bore';
+  const pNo = $('gProgNo')?.value || 'O0001';
+  const dia = +($('gDia')?.value || 80);
+  const stock = +($('gStock')?.value || 76);
+  const depth = +($('gDepth')?.value || 120);
+  const rpm = +($('gRPM')?.value || 650);
+  const fR = +($('gFR')?.value || 0.20);
+  const fF = +($('gFF')?.value || 0.08);
+  const ap = +($('gAp')?.value || 0.8);
+  const css = $('gCss')?.checked;
+  const num = $('gNum')?.checked;
+
+  const L = [], P = [];
+  let cu = null, cv = null;
+  const v1 = n => n.toFixed(1);
+  const mv = (u, v, rapid) => {
+    if (cu !== null) P.push({ u1: cu, v1: cv, u2: u, v2: v, rapid });
+    cu = u; cv = v;
+  };
+  let warn = '';
+  const add = s => L.push(s);
+
+  add('%');
+  add(pNo + ' (' + (op === 'bore' ? 'K ' + dia + ' RASTOCHKA' : op === 'turn' ? 'TASHQI YONISH D' + dia : 'TORETS FREZERLASH') + ')');
+
+  if (op === 'mill') {
+    const W = stock, Ln = depth, step = dia * 0.75, ny = Math.max(1, Math.ceil((W - dia * 0.8) / step) + 1);
+    add('G21 G40 G49 G80 G90 G94');
+    add('G54');
+    add('T01 M06 (TORETS FREZA D' + dia + ' Z6)');
+    add('G43 H01 Z50.0');
+    add('S' + rpm + ' M03');
+    mv(-dia / 2 - 5, dia * 0.4, true);
+    add('G00 X' + v1(-dia / 2 - 5) + ' Y' + v1(dia * 0.4) + ' M08 (SOJ ON)');
+    add('G00 Z5.0');
+    add('G01 Z-' + v1(ap) + ' F' + fF);
+    cu = -dia / 2 - 5; cv = dia * 0.4;
+    for (let i = 0; i < ny; i++) {
+      const y = dia * 0.4 + i * step, xe = (i % 2 === 0) ? (Ln + dia / 2 + 5) : (-dia / 2 - 5);
+      if (i > 0) { add('G01 Y' + v1(y) + ' F' + fF); mv(cu, y, false); }
+      add('G01 X' + v1(xe) + ' F' + fR + ' (PASS ' + (i + 1) + ')');
+      mv(xe, y, false);
+    }
+    add('G00 Z50.0 M09 (SOJ OFF)');
+    add('G28 G91 Z0');
+    add('M05');
+    add('M30');
+  } else {
+    const bore = op === 'bore', fa = 0.4;
+    if (bore && stock >= dia) warn = 'Eslatma: boshlang\'ich teshik yakuniy diametrdan kichik bo\'lishi shart!';
+    if (!bore && stock <= dia) warn = 'Eslatma: xom detal diametri yakuniy diametrdan katta bo\'lishi shart!';
+
+    add('G21 G40 G80 G99');
+    add('T0101 (' + (bore ? 'BORING BAR D' + dia + ' CCMT09T304' : 'TASHQI KESUVCHI CNMG1204') + ')');
+    if (css) {
+      add('G50 S' + Math.round(rpm * 1.4));
+      add('G96 S160 M03 (DOIMIY Vc)');
+    } else {
+      add('G97 S' + rpm + ' M03');
+    }
+    const xs = bore ? stock - 2 : stock + 2;
+    add('G00 X' + v1(xs) + ' Z2.0 M08 (SOJ ON)');
+    cu = 2; cv = xs / 2;
+
+    let x = bore ? stock + 2 * ap : stock - 2 * ap;
+    const dir = bore ? 1 : -1;
+    let guard = 0, pass = 0;
+
+    while (guard++ < 60 && (bore ? x < dia - fa : x > dia + fa)) {
+      pass++;
+      add('G00 X' + v1(x) + ' (XOMAKI ' + pass + ')'); mv(2, x / 2, true);
+      add('G01 Z-' + v1(depth) + ' F' + fR.toFixed(2)); mv(-depth, x / 2, false);
+      add('G01 X' + v1(x - dir * 1)); mv(-depth, (x - dir) / 2, false);
+      add('G00 Z2.0'); mv(2, (x - dir) / 2, true);
+      x += dir * 2 * ap;
+    }
+
+    add('G00 X' + v1(bore ? dia - 1 : dia + 1) + ' (TOZA)'); mv(2, (bore ? dia - 1 : dia + 1) / 2, true);
+    add('G01 X' + v1(dia) + ' F' + fF.toFixed(2)); mv(2, dia / 2, false);
+    add('G01 Z-' + v1(depth)); mv(-depth, dia / 2, false);
+    add('G01 X' + v1(bore ? dia - 1 : dia + 1)); mv(-depth, (bore ? dia - 1 : dia + 1) / 2, false);
+    add('G00 Z2.0'); mv(2, (bore ? dia - 1 : dia + 1) / 2, true);
+    add('G00 X200.0 Z100.0 M09 (SOJ OFF)'); mv(100, 100, true);
+    add('M05');
+    add('M30');
+  }
+  add('%');
+
+  let n = 0;
+  const lines = L.map(s => {
+    if (!num || s === '%' || /^O\d/.test(s)) return s;
+    n += 10;
+    return 'N' + n + ' ' + s;
+  });
+
+  gText = lines.join('\n');
+  gPath = P;
+  gT = 0;
+
+  const box = $('gcodeOutput');
+  if (box) {
+    box.innerHTML = lines.map(s => {
+      const m = s.match(/^(.*?)(\(.*\))?\s*$/);
+      let code = (m[1] || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
+      const cm = m[2] || '';
+      code = code.replace(/^(N\d+)/, '<span class="ln">$1</span>')
+                 .replace(/\b([GM]\d+)/g, '<span class="gc">$1</span>')
+                 .replace(/([XYZ]-?\d+\.?\d*)/g, '<span class="ax">$1</span>')
+                 .replace(/([FST]\d*\.?\d+)/g, '<span class="fs">$1</span>');
+      return '<div>' + code + (cm ? '<span class="cm">' + cm + '</span>' : '') + '</div>';
+    }).join('');
+  }
+
+  if ($('gcodeInfo')) {
+    $('gcodeInfo').innerHTML = (warn ? '<span class="text-danger fw-bold">' + warn + '</span><br>' : '') +
+      'Jami satrlar: <b>' + lines.length + '</b> · Trayektoriya segmentlari: <b>' + P.length + '</b> ta';
+  }
+}
+
+function drawPath() {
+  const c = $('pathCanvas');
+  if (!c) return;
+  const g = c.getContext('2d'), W = c.width, H4 = c.height;
+  studioGrid(g, W, H4);
+  if (!gPath.length) return;
+
+  const feeds = gPath.filter(s => !s.rapid);
+  let u0 = 1e9, u1 = -1e9, v0 = 1e9, v1 = -1e9;
+  const targetSegs = feeds.length ? feeds : gPath;
+  targetSegs.forEach(s => {
+    u0 = Math.min(u0, s.u1, s.u2); u1 = Math.max(u1, s.u1, s.u2);
+    v0 = Math.min(v0, s.v1, s.v2); v1 = Math.max(v1, s.v1, s.v2);
+  });
+  u1 = Math.max(u1, 5);
+
+  const pad = 45;
+  const su = (W - 2 * pad) / Math.max(1, u1 - u0), sv = (H4 - 2 * pad) / Math.max(1, v1 - v0), s = Math.min(su, sv);
+  const ox = pad + ((W - 2 * pad) - (u1 - u0) * s) / 2, oy = pad + ((H4 - 2 * pad) - (v1 - v0) * s) / 2;
+  const X = u => ox + (u - u0) * s, Y = v => H4 - oy - (v - v0) * s;
+
+  const lens = gPath.map(p => Math.hypot(p.u2 - p.u1, p.v2 - p.v1));
+  const tot = lens.reduce((a, b) => a + b, 0) || 1;
+  gT = (gT + tot / 420) % (tot * 1.12);
+
+  let acc = 0, dot = null;
+  g.lineWidth = 2;
+
+  gPath.forEach((p, i) => {
+    const remain = gT - acc;
+    const frac = clamp(remain / (lens[i] || 1), 0, 1);
+    if (remain > 0) {
+      g.strokeStyle = p.rapid ? 'rgba(255, 59, 48, 0.7)' : '#34c759';
+      g.setLineDash(p.rapid ? [6, 5] : []);
+      const ex = p.u1 + (p.u2 - p.u1) * frac, ey = p.v1 + (p.v2 - p.v1) * frac;
+      g.beginPath(); g.moveTo(X(p.u1), Y(p.v1)); g.lineTo(X(ex), Y(ey)); g.stroke();
+      if (frac < 1 || i === gPath.length - 1) dot = { x: X(ex), y: Y(ey) };
+    }
+    acc += lens[i];
+  });
+  g.setLineDash([]);
+
+  if (dot) {
+    const gr = g.createRadialGradient(dot.x, dot.y, 0, dot.x, dot.y, 14);
+    gr.addColorStop(0, 'rgba(255, 214, 10, 1)');
+    gr.addColorStop(1, 'rgba(255, 149, 0, 0)');
+    g.fillStyle = gr;
+    g.fillRect(dot.x - 14, dot.y - 14, 28, 28);
+    g.fillStyle = '#ffffff';
+    g.beginPath(); g.arc(dot.x, dot.y, 3, 0, 6.28); g.fill();
+  }
+
+  g.fillStyle = '#8e8e93';
+  g.font = '500 10px -apple-system, Inter';
+  g.textAlign = 'left';
+  g.fillText($('gOp')?.value === 'mill' ? 'X (uzunlik) → / Y (en) ↑' : 'Z (chuqurlik) ← / X (radius) ↑', 12, H4 - 12);
+}
+
+/* ==========================================================================
+   6. TOOLS, STANDARDS & H7 TOLERANCE
+   ========================================================================== */
+const H7_DATA = [
+  [30, 50, 25], [50, 80, 30], [80, 120, 35], [120, 180, 40], [180, 250, 46], [250, 315, 52]
+];
+
+function h7Update() {
+  const d = +($('h7In')?.value || 80);
+  const row = H7_DATA.find(r => d > r[0] && d <= r[1]);
+  if (!row) {
+    if ($('h7Out')) $('h7Out').textContent = 'Oraliqdan tashqari';
+    if ($('h7Lim')) $('h7Lim').textContent = '—';
+    return;
+  }
+  if ($('h7Out')) $('h7Out').textContent = 'Ø' + d + ' H7 (+0.0' + String(row[2]).padStart(2, '0') + ' / 0)';
+  if ($('h7Lim')) $('h7Lim').textContent = (d + row[2] / 1000).toFixed(3) + ' / ' + d.toFixed(3) + ' mm';
+}
+
+const INS_DESCRIPTIONS = [
+  'C — plastinka shakli: 80° li romb (universal yo\'nish va rastochka uchun).',
+  'C — asosiy orqa bo\'shliq burchagi: 7°.',
+  'M — o\'lcham va aniqlik tolerans sinfi (sanoat standarti).',
+  'T — biriktirish shakli: markaziy konussimon fiksatsiya teshigi va qirindi sindirgich.',
+  '09 — kesuvchi qirra uzunligi ≈ 9.525 mm.',
+  'T3 — plastinka qalinligi: 3.97 mm.',
+  '04 — uchi egovlanish radiusi: r = 0.4 mm (toza yuza sifatini belgilaydi).'
+];
+
+/* ==========================================================================
+   7. SAFETY CHECKLIST
+   ========================================================================== */
+const CHECKS = [
+  'Detal patronda ishonchli mahkamlangan va kalit chiqarib olingan',
+  'Boring bar suportga to\'g\'ri burchakda qotirilgan',
+  'Plastinka qirrasi butun (CCMT 09T304 darz ketmagan)',
+  'Himoya oynalari va to\'siq eshiklari to\'liq yopiq',
+  'SOJ sathi va nasos bosimi tekshirilgan',
+  'G54 nol nuqta va asbob kompensatsiyasi to\'g\'ri kiritilgan',
+  'G-kod dasturi xavfsiz quruq yurishda (dry run) tekshirilgan',
+  'Avariyali favqulodda to\'xtatish (E-Stop) tugmasi ishchi holatda'
+];
+let checkedItems = new Set();
+
+function renderChecks() {
+  const container = $('checkList');
+  if (!container) return;
+  container.innerHTML = CHECKS.map((text, i) => `
+    <div class="checklist-item ${checkedItems.has(i) ? 'on' : ''}" data-i="${i}">
+      <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+      <div style="font-size:0.9rem; font-weight:500">${text}</div>
+    </div>
+  `).join('');
+
+  const p = Math.round(checkedItems.size / CHECKS.length * 100);
+  if ($('ring')) $('ring').style.setProperty('--p', p + '%');
+  if ($('ringTxt')) $('ringTxt').textContent = p + '%';
+
+  const m = $('safeMsg');
+  if (m) {
+    if (p === 100) {
+      m.className = 'apple-alert ok mt-3';
+      m.innerHTML = '<i class="fa-solid fa-circle-check me-1"></i> Barcha bandlar tasdiqlandi — stanokni ishga tushirish mumkin!';
+    } else {
+      m.className = 'apple-alert ' + (p > 50 ? 'warn' : 'bad') + ' mt-3';
+      m.textContent = 'Yana ' + (CHECKS.length - checkedItems.size) + ' ta xavfsizlik bandi tasdiqlanmadi.';
+    }
+  }
+}
+
+/* ==========================================================================
+   8. QUIZ ENGINE
+   ========================================================================== */
+const QUIZ_DATA = [
+  { q: 'Shpindel oboroti (n) qaysi formula bilan aniqlanadi?', o: ['n = Vc · π · D / 1000', 'n = 1000 · Vc / (π · D)', 'n = Vf / f · D', 'n = π · D / Vc'], a: 1, e: 'n = 1000 · Vc / (π · D) — chiziqli kesish tezligidan daqiqalik oborotga o\'tish formulasi.' },
+  { q: 'Ø80 H7 teshik uchun ISO standarti bo\'yicha ruxsat etilgan yuqori chegara og\'ishi qancha?', o: ['+0.010 mm', '+0.030 mm', '+0.080 mm', '−0.030 mm'], a: 1, e: '50–80 mm oralig\'i uchun IT7 = 30 µm, ya\'ni yuqori chegara +0.030 mm, quyi esa 0.' },
+  { q: 'Metallga ishlov berishda SOJ ning asosiy vazifasi nima?', o: ['Kesish zonasini sovitish, moylash va qirindini yuvib ketish', 'Stanokning tebranishini to\'xtatish', 'Faqat elektr energiyasini tejash', 'Patronning tez aylanishini ta\'minlash'], a: 0, e: 'SOJ (Sovituvchi-moylovchi suyuqlik) ishqalanishni kamaytiradi, haroratni pasaytiradi va asbob umrini 2-3 barobar uzaytiradi.' },
+  { q: 'Tebranish hosil bo\'lmasligi uchun boring bar (rastochka go\'lagi) uzunligi diametridan necha baravardan oshmasligi lozim?', o: ['2 barobar', '4 barobar', '8 barobar', '12 barobar'], a: 1, e: 'L/D ≤ 4 qoidasi po\'lat go\'laklar uchun standart hisoblanadi. Undan uzuni uchun qattiq qotishmali go\'laklar zarur.' },
+  { q: 'ISO klassifikatsiyasi bo\'yicha "P" guruhi qaysi metall turiga mos va qaysi rangda belgilanadi?', o: ['Cho\'yan — qizil', 'Uglerodli va legirlangan po\'lat — moviy/ko\'k', 'Alyuminiy — yashil', 'Titan — to\'q sariq'], a: 1, e: 'P guruhi po\'latlar uchun bo\'lib, xalqaro ko\'k rang bilan belgilanadi.' },
+  { q: 'CCMT 09T304 plastinka markirovkasidagi birinchi "C" harfi nimani bildiradi?', o: ['Kesish chuqurligini', '80° li rombsimon plastinka shaklini', 'Plastinkaning qoplamasini', 'Ichki teshik konusligini'], a: 1, e: 'Birinchi harf plastinkaning geometrik shaklini bildiradi: C harfi 80 gradusli rombni anglatadi.' },
+  { q: 'Burg\'ulash va yo\'nishda minutli uzatish (Vf) qanday hisoblanadi?', o: ['Vf = n · f', 'Vf = n / f', 'Vf = Vc · f', 'Vf = D · f'], a: 0, e: 'Vf = n · f (mm/min) — oborot bilan har bir oborotdagi surilish ko\'paytmasi.' },
+  { q: 'Rastochkada toza o\'tishda Ra 1.6 yuza tozaligiga erishish uchun nima qilinadi?', o: ['Uzatish oshiriladi', 'Uzatish kamaytiriladi (f ≤ 0.08 mm/ob) va uchi radiusi to\'g\'ri tanlanadi', 'SOJ o\'chiriladi', 'Oborot nolga tushiriladi'], a: 1, e: 'Ra ≈ f² / (32·r) formulasi bo\'yicha: uzatish qanchalik kichik bo\'lsa, yuza tozaligi shuncha yuqori bo\'ladi.' }
+];
+
+let quizIdx = 0, quizScore = 0, quizLocked = false;
+
+function renderQuiz() {
+  const box = $('quizBox');
+  if (!box) return;
+
+  if (quizIdx >= QUIZ_DATA.length) {
+    const p = Math.round(quizScore / QUIZ_DATA.length * 100);
+    if ($('quizBar')) $('quizBar').style.width = '100%';
+    if ($('quizCount')) $('quizCount').textContent = 'Natija';
+    box.innerHTML = `
+      <div class="text-center py-4">
+        <div class="completion-ring mb-3" style="--p:${p}%"><span>${p}%</span></div>
+        <h4 class="fw-bold mb-1">${quizScore} / ${QUIZ_DATA.length} To'g'ri Javob</h4>
+        <p class="text-secondary mb-4">${p >= 85 ? 'A\'lo daraja! Siz professional texnologsiz 🏆' : p >= 60 ? 'Yaxshi natija! Bilimlaringizni yanada mustahkamlang 📚' : 'Mavzularni qayta ko\'rib chiqish tavsiya etiladi 🔄'}</p>
+        <button class="btn-apple-primary btn-apple-blue" id="btnRestartQuiz">
+          <i class="fa-solid fa-rotate-left"></i> Testni Qaytadan Boshlash
+        </button>
+      </div>
+    `;
+    if (p >= 85) confetti();
+    $('btnRestartQuiz').onclick = () => { quizIdx = 0; quizScore = 0; renderQuiz(); };
+    return;
+  }
+
+  const q = QUIZ_DATA[quizIdx];
+  quizLocked = false;
+  if ($('quizCount')) $('quizCount').textContent = (quizIdx + 1) + ' / ' + QUIZ_DATA.length;
+  if ($('quizBar')) $('quizBar').style.width = (quizIdx / QUIZ_DATA.length * 100) + '%';
+
+  box.innerHTML = `
+    <h5 class="fw-bold mb-3">${q.q}</h5>
+    ${q.o.map((opt, i) => `
+      <button class="quiz-opt-btn" data-i="${i}">
+        <strong>${String.fromCharCode(65 + i)}.</strong> ${opt}
+      </button>
+    `).join('')}
+    <div id="quizExplain" class="mt-2"></div>
+  `;
+}
+
+function answerQuiz(i) {
+  if (quizLocked) return;
+  quizLocked = true;
+  const q = QUIZ_DATA[quizIdx];
+  const btns = [...document.querySelectorAll('.quiz-opt-btn')];
+  btns.forEach((btn, k) => {
+    btn.disabled = true;
+    if (k === q.a) btn.classList.add('right');
+  });
+
+  if (i === q.a) {
+    quizScore++;
+  } else {
+    btns[i].classList.add('wrong');
+  }
+
+  $('quizExplain').innerHTML = `
+    <div class="apple-alert ${i === q.a ? 'ok' : 'bad'} mb-3">
+      <strong>${i === q.a ? 'To\'g\'ri!' : 'Noto\'g\'ri.'}</strong> ${q.e}
+    </div>
+    <button class="btn-apple-primary btn-apple-blue py-2 px-3 fs-7" id="btnNextQuiz">
+      ${quizIdx === QUIZ_DATA.length - 1 ? 'Natijalarni ko\'rish' : 'Keyingi savol'} <i class="fa-solid fa-arrow-right ms-1"></i>
+    </button>
+  `;
+
+  $('btnNextQuiz').onclick = () => { quizIdx++; renderQuiz(); };
+}
+
+/* ==========================================================================
+   INITIALIZATION & MAIN RAF LOOP
+   ========================================================================== */
+function animLoop(t) {
+  switch (activeTab) {
+    case 'k80': drawBoring(); break;
+    case 'hankook': drawHankook(); break;
+    case 'frezer': drawMilling(); break;
+    case 'gcode': drawPath(); break;
+  }
+  requestAnimationFrame(animLoop);
+}
+
+window.addEventListener('load', () => {
+  initGears();
+  animateCounters();
+
+  /* Clock */
+  const updateClock = () => {
+    if ($('clock')) {
+      $('clock').textContent = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Tashkent' });
+    }
+  };
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  /* Tab change events */
+  document.querySelectorAll('#mainTab button').forEach(btn => {
+    btn.addEventListener('shown.bs.tab', e => {
+      activeTab = e.target.dataset.bsTarget.slice(1);
+      if (activeTab === 'home') animateCounters();
+      if (activeTab === 'calc') calcMachining();
+    });
+  });
+
+  /* Back to Top button */
+  const toTop = $('toTop');
+  window.addEventListener('scroll', () => {
+    if (toTop) toTop.classList.toggle('show', window.scrollY > 300);
+  });
+  if (toTop) toTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  /* K80 Events */
+  $('btnStartBoring')?.addEventListener('click', toggleBoring);
+  $('btnResetBoring')?.addEventListener('click', resetBoring);
+  $('btnSoj')?.addEventListener('click', () => {
+    B.soj = !B.soj;
+    if ($('sojStatus')) $('sojStatus').textContent = B.soj ? 'YONIQ' : 'O\'CHIQ';
+  });
+
+  /* Hankook Events */
+  $('btnHankookRun')?.addEventListener('click', () => {
+    H.run = !H.run;
+    const b = $('btnHankookRun');
+    if (b) {
+      b.className = 'btn-apple-primary w-100 ' + (H.run ? 'btn-apple-danger' : 'btn-apple-blue');
+      b.innerHTML = H.run ? '<i class="fa-solid fa-stop"></i> Spindelni To\'xtatish' : '<i class="fa-solid fa-power-off"></i> Spindelni Ishga Tushirish';
+    }
+  });
+
+  /* Milling Events */
+  $('btnMillingRun')?.addEventListener('click', () => {
+    M.run = !M.run;
+    const b = $('btnMillingRun');
+    if (b) {
+      b.className = 'btn-apple-primary w-100 mb-3 ' + (M.run ? 'btn-apple-danger' : 'btn-apple-blue');
+      b.innerHTML = M.run ? '<i class="fa-solid fa-pause"></i> Frezerlashni To\'xtatish' : '<i class="fa-solid fa-play"></i> Frezerlashni Boshlash';
+    }
+  });
+
+  /* Calculator Events */
+  ['cDiameter', 'cVc', 'cFeed', 'cLength', 'cAp', 'cR', 'cZ'].forEach(id => {
+    $(id)?.addEventListener('input', calcMachining);
+  });
+  $('cMat')?.addEventListener('change', () => {
+    const m = MATS[$('cMat').value];
+    if ($('cVc')) $('cVc').value = m.vc;
+    if ($('cFeed')) $('cFeed').value = $('cOp')?.value === 'mill' ? m.f.toFixed(2) : m.f;
+    calcMachining();
+  });
+  $('cOp')?.addEventListener('change', () => {
+    const op = $('cOp').value;
+    const m = MATS[$('cMat')?.value || 'steel'];
+    if (op === 'mill') {
+      if ($('cDiameter')) $('cDiameter').value = 100;
+      if ($('cLength')) $('cLength').value = 300;
+      if ($('cAp')) $('cAp').value = 2;
+      if ($('cFeed')) $('cFeed').value = 0.12;
+      if ($('cVc')) $('cVc').value = Math.round(m.vc * 1.1);
+    } else {
+      if ($('cDiameter')) $('cDiameter').value = 80;
+      if ($('cLength')) $('cLength').value = 120;
+      if ($('cAp')) $('cAp').value = 1;
+      if ($('cFeed')) $('cFeed').value = m.f;
+      if ($('cVc')) $('cVc').value = m.vc;
+    }
+    calcMachining();
+  });
+
+  /* G-Code Events */
+  $('btnGen')?.addEventListener('click', generateGCode);
+  $('gOp')?.addEventListener('change', gcfgApply);
+  $('btnCopy')?.addEventListener('click', () => {
+    (navigator.clipboard ? navigator.clipboard.writeText(gText) : Promise.reject())
+      .then(() => toast('G-KOD nusxalandi!'))
+      .catch(() => toast('Nusxalash imkoni bo\'lmadi'));
+  });
+  $('btnDl')?.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([gText], { type: 'text/plain' }));
+    a.download = ($('gProgNo')?.value || 'program') + '.nc';
+    a.click();
+    toast('Fayl muvaffaqiyatli yuklab olindi (.nc)');
+  });
+
+  /* Tools & Standards Events */
+  $('h7In')?.addEventListener('input', h7Update);
+  h7Update();
+
+  $('insertChips')?.addEventListener('click', e => {
+    const c = e.target.closest('.iso-chip');
+    if (!c) return;
+    document.querySelectorAll('#insertChips .iso-chip').forEach(x => x.classList.remove('on'));
+    c.classList.add('on');
+    if ($('insertInfo')) $('insertInfo').textContent = INS_DESCRIPTIONS[+c.dataset.i];
+  });
+
+  /* Safety Checklist Events */
+  $('checkList')?.addEventListener('click', e => {
+    const it = e.target.closest('.checklist-item');
+    if (!it) return;
+    const i = +it.dataset.i;
+    checkedItems.has(i) ? checkedItems.delete(i) : checkedItems.add(i);
+    renderChecks();
+    if (checkedItems.size === CHECKS.length) confetti();
+  });
+  renderChecks();
+
+  /* Quiz Events */
+  $('quizBox')?.addEventListener('click', e => {
+    const b = e.target.closest('.quiz-opt-btn');
+    if (b) answerQuiz(+b.dataset.i);
+  });
+  renderQuiz();
+
+  calcMachining();
+  generateGCode();
+  setBoringBtn();
+
+  requestAnimationFrame(animLoop);
+});
+</script>
+</body>
+</html>
